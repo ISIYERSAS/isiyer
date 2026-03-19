@@ -1041,13 +1041,13 @@
 
           <div class="contact-card">
             <h3>Formulario de contacto</h3>
-            <form class="form">
-              <input type="text" placeholder="Nombre" />
-              <input type="text" placeholder="Teléfono" />
-              <input type="email" placeholder="Correo electrónico" />
-              <textarea placeholder="Cuéntenos brevemente qué servicio necesita"></textarea>
-              <button type="button" class="btn btn-secondary">Enviar solicitud</button>
-            </form>
+           <form class="form" id="contactForm">
+  <input type="text" id="nombre" placeholder="Nombre" required />
+  <input type="text" id="telefono" placeholder="Teléfono" required />
+  <input type="email" id="correo" placeholder="Correo electrónico" required />
+  <textarea id="mensaje" placeholder="Cuéntenos brevemente qué servicio necesita" required></textarea>
+  <button type="submit" class="btn btn-secondary">Enviar solicitud</button>
+</form>
           </div>
         </div>
       </div>
@@ -1165,5 +1165,37 @@
     ]
   }
   </script>
+  <script>
+  const contactForm = document.getElementById('contactForm');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const nombre = document.getElementById('nombre').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const correo = document.getElementById('correo').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+
+      if (!nombre || !telefono || !correo || !mensaje) {
+        alert('Por favor complete todos los campos antes de enviar.');
+        return;
+      }
+
+      const texto = `Hola, soy ${nombre}.
+Teléfono: ${telefono}
+Correo: ${correo}
+
+Estoy interesado en los servicios de ISIYER S.A.S.
+Detalle de la solicitud:
+${mensaje}`;
+
+      const numeroWhatsapp = '593983881253';
+      const url = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(texto)}`;
+
+      window.open(url, '_blank');
+    });
+  }
+</script>
 </body>
 </html>
