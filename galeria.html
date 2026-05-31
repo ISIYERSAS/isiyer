@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería de Proyectos | ISIYER S.A.S.</title>
+  <meta name="description" content="Galería completa de trabajos realizados por ISIYER S.A.S. — sistemas hidráulicos, generadores eléctricos, climatización y tableros en clientes públicos y privados del Ecuador." />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/png" href="ISIYERLOGO.png">
+
+  <style>
+    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+    body { text-rendering: optimizeLegibility; }
+
+    :root {
+      --primary: #0f3b63;
+      --primary-dark: #0a2944;
+      --accent: #2ea44f;
+      --accent-dark: #22863a;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --bg: #f6f8fb;
+      --white: #ffffff;
+      --border: #d8e0ea;
+      --shadow: 0 14px 35px rgba(15, 59, 99, 0.12);
+      --radius: 20px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(var(--max), calc(100% - 2rem));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--primary-dark);
+      color: #eaf2fb;
+      font-size: 0.95rem;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.65rem 0;
+      flex-wrap: wrap;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(216, 224, 234, 0.85);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      border-radius: 16px;
+      background: #fff;
+      padding: 0.25rem;
+      box-shadow: 0 8px 24px rgba(15, 59, 99, 0.10);
+    }
+
+    .brand-text strong {
+      display: block;
+      color: var(--primary);
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.2rem;
+      padding: 0;
+      margin: 0;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a:hover { color: var(--primary); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.95rem 1.35rem;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--white);
+      box-shadow: 0 14px 28px rgba(46, 164, 79, 0.24);
+    }
+
+    .btn-primary:hover { background: var(--accent-dark); }
+
+    .page-hero {
+      background: linear-gradient(135deg, rgba(15,59,99,0.97), rgba(15,59,99,0.80)),
+                  url('fotos/kairos-hidraulicos-hidroneumatico-01.jpg') center/cover no-repeat;
+      color: var(--white);
+      padding: 3.5rem 0 3rem;
+    }
+
+    .page-hero h1 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(1.9rem, 4vw, 3rem);
+    }
+
+    .page-hero p {
+      margin: 0;
+      color: #d7e6f6;
+      font-size: 1.05rem;
+      max-width: 640px;
+    }
+
+    .filter-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      position: sticky;
+      top: 82px;
+      z-index: 20;
+    }
+
+    .filter-bar-inner {
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .filter-chip {
+      border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--primary);
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .filter-chip:hover,
+    .filter-chip.active {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+
+    .main-content {
+      padding: 2.5rem 0 4rem;
+    }
+
+    .client-section {
+      margin-bottom: 3.5rem;
+    }
+
+    .client-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .client-badge {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .client-header h2 {
+      margin: 0;
+      font-size: 1.3rem;
+      color: var(--primary);
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .photo-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .photo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(15, 59, 99, 0.18);
+    }
+
+    .photo-card img {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .photo-card-caption {
+      padding: 0.85rem 1rem;
+      font-size: 0.92rem;
+      color: var(--muted);
+      background: linear-gradient(180deg, #fff, #f8fbff);
+    }
+
+    .cat-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      margin-bottom: 0.3rem;
+    }
+
+    .cat-generadores { background: rgba(46,164,79,0.12); color: #1a7a3a; }
+    .cat-hidraulicos { background: rgba(15,59,99,0.10); color: #0f3b63; }
+    .cat-climatizacion { background: rgba(250,140,0,0.12); color: #b35a00; }
+    .cat-tableros { background: rgba(150,0,200,0.10); color: #7200a0; }
+
+    .client-section.hidden { display: none; }
+
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(5, 15, 26, 0.90);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.2rem;
+      z-index: 200;
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox-content {
+      max-width: 1100px;
+      width: 100%;
+      background: #0c2237;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.4);
+    }
+
+    .lightbox-content img {
+      width: 100%;
+      max-height: 72vh;
+      object-fit: contain;
+      background: #091826;
+    }
+
+    .lightbox-caption {
+      padding: 1rem 1.2rem 1.25rem;
+      color: #e8f1fb;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      width: 46px;
+      height: 46px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.14);
+      color: var(--white);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    footer {
+      background: var(--primary-dark);
+      color: #d7e6f6;
+      padding: 2rem 0;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer-grid strong { color: #fff; }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 120;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #25d366;
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 18px 36px rgba(37, 211, 102, 0.35);
+      font-size: 1.75rem;
+    }
+
+    @media (max-width: 760px) {
+      .nav { flex-direction: column; align-items: flex-start; }
+      nav ul { justify-content: flex-start; gap: 0.8rem; }
+      .photo-grid { grid-template-columns: 1fr; }
+      .topbar-inner, .footer-grid { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div>ATENCIÓN EN TODO EL ECUADOR</div>
+      <div>VENTAS@ISIYER.COM · 0983881253</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="ISIYERLOGO.png" alt="Logo ISIYER" width="64" height="64" fetchpriority="high" decoding="async" />
+        <div class="brand-text">
+          <strong>ISIYER S.A.S.</strong>
+          <span>Ingeniería en Sistemas Industriales y Energía Renovable</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
+          <li><a href="index.html#proyectos">Proyectos</a></li>
+          <li><a href="galeria.html" style="color:var(--primary); font-weight:700;">Galería</a></li>
+          <li><a href="index.html#clientes">Clientes</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+          <li><a class="btn btn-primary" href="https://wa.me/593983881253" target="_blank" rel="noopener noreferrer">Solicitar visita técnica sin costo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1>Galería de proyectos ejecutados</h1>
+      <p>Fotografías reales de trabajos realizados por ISIYER S.A.S. en instituciones públicas y empresas privadas del Ecuador.</p>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <div class="container filter-bar-inner">
+      <button class="filter-chip active" data-filter="todos">Todos</button>
+      <button class="filter-chip" data-filter="generadores">Generadores</button>
+      <button class="filter-chip" data-filter="hidraulicos">Hidráulicos</button>
+      <button class="filter-chip" data-filter="climatizacion">Climatización</button>
+      <button class="filter-chip" data-filter="tableros">Tableros</button>
+    </div>
+  </div>
+
+  <main class="main-content">
+    <div class="container" id="galeria-container">
+
+      <!-- AGRICULTURA -->
+      <div class="client-section" data-categories="generadores">
+        <div class="client-header">
+          <h2>Agricultura</h2>
+          <span class="client-badge cat-generadores">Generadores</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/agricultura-generadores-cummins-01.jpg" data-caption="Generador Cummins instalado en sala de máquinas — puesta en marcha y verificación. Cliente: Agricultura.">
+            <img src="fotos/agricultura-generadores-cummins-01.jpg" alt="Generador Cummins sala de máquinas" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-generadores">Generadores</span><br>
+              Generador Cummins — instalación y puesta en marcha.
+            </div>
+          </div>
+          <div class="photo-card" data-full="fotos/agricultura-generadores-baterias-02.jpg" data-caption="Banco de baterías Bosch S3 Heavy Duty conectado a generador Cummins — mantenimiento preventivo.">
+            <img src="fotos/agricultura-generadores-baterias-02.jpg" alt="Banco de baterías generador" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-generadores">Generadores</span><br>
+              Banco de baterías Bosch S3 — mantenimiento preventivo.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOYACA -->
+      <div class="client-section" data-categories="climatizacion">
+        <div class="client-header">
+          <h2>Boyacá</h2>
+          <span class="client-badge cat-climatizacion">Climatización</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/boyaca-climatizacion-condensador-01.jpg" data-caption="Revisión técnica de serpentín condensador en unidad de bomba de calor. Cliente: Boyacá.">
+            <img src="fotos/boyaca-climatizacion-condensador-01.jpg" alt="Serpentín condensador bomba de calor" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-climatizacion">Climatización</span><br>
+              Revisión de serpentín condensador — bomba de calor.
+            </div>
+          </div>
+          <div class="photo-card" data-full="fotos/boyaca-climatizacion-condensador-02.jpg" data-caption="Inspección de unidad condensadora de bomba de calor — verificación de estado de serpentín. Cliente: Boyacá.">
+            <img src="fotos/boyaca-climatizacion-condensador-02.jpg" alt="Inspección unidad condensadora" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-climatizacion">Climatización</span><br>
+              Inspección de unidad condensadora — bomba de calor.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CACES -->
+      <div class="client-section" data-categories="tableros hidraulicos">
+        <div class="client-header">
+          <h2>CACES</h2>
+          <span class="client-badge cat-tableros">Tableros</span>
+          <span class="client-badge cat-hidraulicos">Hidráulicos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/caces-tableros-tecnico-panel-01.jpg" data-caption="Técnico ISIYER realizando diagnóstico y ajuste de tablero de control eléctrico en sitio. Cliente: CACES.">
+            <img src="fotos/caces-tableros-tecnico-panel-01.jpg" alt="Técnico en tablero de control eléctrico CACES" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-tableros">Tableros</span><br>
+              Diagnóstico de tablero de control eléctrico.
+            </div>
+          </div>
+          <div class="photo-card" data-full="fotos/caces-hidraulicos-doble-bomba-02.jpg" data-caption="Sistema hidroneumático con doble bomba, tuberías verdes, tanque de presión y tablero de mando. Cliente: CACES.">
+            <img src="fotos/caces-hidraulicos-doble-bomba-02.jpg" alt="Sistema doble bomba hidroneumático CACES" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-hidraulicos">Hidráulicos</span><br>
+              Sistema doble bomba con tablero de mando.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONSEJO DE COMUNICACION -->
+      <div class="client-section" data-categories="hidraulicos">
+        <div class="client-header">
+          <h2>Consejo de Comunicación</h2>
+          <span class="client-badge cat-hidraulicos">Hidráulicos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/consejo-comunicacion-hidraulicos-cisterna-01.jpg" data-caption="Técnico en equipo completo de protección personal para limpieza y desinfección de cisterna. Cliente: Consejo de Comunicación.">
+            <img src="fotos/consejo-comunicacion-hidraulicos-cisterna-01.jpg" alt="Técnico limpieza de cisterna" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-hidraulicos">Hidráulicos</span><br>
+              Limpieza y desinfección de cisterna con EPP completo.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMAPS -->
+      <div class="client-section" data-categories="generadores">
+        <div class="client-header">
+          <h2>EMAPS</h2>
+          <span class="client-badge cat-generadores">Generadores</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/emaps-generadores-panel-kohler-01.jpg" data-caption="Panel de control Kohler de generador eléctrico — verificación de voltaje, frecuencia y amperaje. Cliente: EMAPS.">
+            <img src="fotos/emaps-generadores-panel-kohler-01.jpg" alt="Panel control Kohler generador" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-generadores">Generadores</span><br>
+              Panel de control Kohler — verificación de parámetros operativos.
+            </div>
+          </div>
+          <div class="photo-card" data-full="fotos/emaps-generadores-motor-cummins-02.jpg" data-caption="Motor Cummins de generador abierto — revisión técnica interna y mantenimiento. Cliente: EMAPS.">
+            <img src="fotos/emaps-generadores-motor-cummins-02.jpg" alt="Motor Cummins generador revisión" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-generadores">Generadores</span><br>
+              Motor Cummins — revisión técnica interna.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOSPITAL SAN LAZARO -->
+      <div class="client-section" data-categories="generadores">
+        <div class="client-header">
+          <h2>Hospital Psiquiátrico San Lázaro</h2>
+          <span class="client-badge cat-generadores">Generadores</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/hospital-san-lazaro-generadores-motor-01.png" data-caption="Bobinado y reparación de estátor de motor eléctrico — servicio especializado de rebobinado. Cliente: Hospital San Lázaro.">
+            <img src="fotos/hospital-san-lazaro-generadores-motor-01.png" alt="Rebobinado de estátor motor eléctrico" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-generadores">Generadores</span><br>
+              Rebobinado de estátor — reparación de motor eléctrico.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMBABURA -->
+      <div class="client-section" data-categories="tableros">
+        <div class="client-header">
+          <h2>Gobierno Provincial de Imbabura</h2>
+          <span class="client-badge cat-tableros">Tableros</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/imbabura-tableros-diseno-electrico-01.jpg" data-caption="Diseño de esquema eléctrico de control para sistema de doble bomba con automatización. Cliente: Prefectura de Imbabura.">
+            <img src="fotos/imbabura-tableros-diseno-electrico-01.jpg" alt="Diseño eléctrico sistema doble bomba" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-tableros">Tableros</span><br>
+              Diseño de esquema eléctrico — sistema doble bomba automatizado.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IESS -->
+      <div class="client-section" data-categories="hidraulicos">
+        <div class="client-header">
+          <h2>IESS</h2>
+          <span class="client-badge cat-hidraulicos">Hidráulicos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/iess-hidraulicos-hidroneumatico-01.jpg" data-caption="Sistema de presurización de agua con bomba centrífuga, tanque hidroneumático y red de tuberías. Cliente: IESS.">
+            <img src="fotos/iess-hidraulicos-hidroneumatico-01.jpg" alt="Sistema hidroneumático IESS" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-hidraulicos">Hidráulicos</span><br>
+              Sistema de presurización de agua — bomba y tanque hidroneumático.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IESS GRANADOS -->
+      <div class="client-section" data-categories="hidraulicos">
+        <div class="client-header">
+          <h2>IESS Granados</h2>
+          <span class="client-badge cat-hidraulicos">Hidráulicos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/iess-granados-hidraulicos-bomba-01.jpg" data-caption="Bomba centrífuga Pedrollo instalada con red hidráulica — revisión y mantenimiento preventivo. Cliente: IESS Granados.">
+            <img src="fotos/iess-granados-hidraulicos-bomba-01.jpg" alt="Bomba Pedrollo IESS Granados" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-hidraulicos">Hidráulicos</span><br>
+              Bomba centrífuga Pedrollo — revisión y mantenimiento.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- INEC -->
+      <div class="client-section" data-categories="generadores">
+        <div class="client-header">
+          <h2>INEC</h2>
+          <span class="client-badge cat-generadores">Generadores</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/inec-generadores-kit-mantenimiento-01.jpg" data-caption="Kit de repuestos y fluidos para mantenimiento de generador — filtros de aire, aceite y refrigerante. Cliente: INEC.">
+            <img src="fotos/inec-generadores-kit-mantenimiento-01.jpg" alt="Kit mantenimiento generador INEC" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-generadores">Generadores</span><br>
+              Kit de repuestos y fluidos — mantenimiento preventivo de generador.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KAIROS -->
+      <div class="client-section" data-categories="hidraulicos">
+        <div class="client-header">
+          <h2>Kairos</h2>
+          <span class="client-badge cat-hidraulicos">Hidráulicos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/kairos-hidraulicos-hidroneumatico-01.jpg" data-caption="Sistema hidroneumático completo con tanque, bomba centrífuga Pedrollo y red de tuberías. Instalación y puesta en marcha. Cliente: Kairos.">
+            <img src="fotos/kairos-hidraulicos-hidroneumatico-01.jpg" alt="Sistema hidroneumático completo Kairos" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-hidraulicos">Hidráulicos</span><br>
+              Sistema hidroneumático completo — instalación y puesta en marcha.
+            </div>
+          </div>
+          <div class="photo-card" data-full="fotos/kairos-hidraulicos-bomba-diesel-02.jpg" data-caption="Bomba de agua a diesel y bomba eléctrica instaladas con red de tuberías. Cliente: Kairos.">
+            <img src="fotos/kairos-hidraulicos-bomba-diesel-02.jpg" alt="Bomba diesel y eléctrica Kairos" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-hidraulicos">Hidráulicos</span><br>
+              Bomba diesel y bomba eléctrica — sistema de respaldo.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- KAYANA -->
+      <div class="client-section" data-categories="tableros">
+        <div class="client-header">
+          <h2>Kayana</h2>
+          <span class="client-badge cat-tableros">Tableros</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/kayana-tableros-panel-01.jpg" data-caption="Interior de tablero eléctrico — fusibles, contactores y reles de protección instalados. Cliente: Kayana.">
+            <img src="fotos/kayana-tableros-panel-01.jpg" alt="Interior tablero eléctrico Kayana" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-tableros">Tableros</span><br>
+              Interior de tablero — fusibles y contactores de protección.
+            </div>
+          </div>
+          <div class="photo-card" data-full="fotos/kayana-tableros-rele-02.jpg" data-caption="Relé térmico CNC Electric y contactor instalados en tablero de control de bomba. Cliente: Kayana.">
+            <img src="fotos/kayana-tableros-rele-02.jpg" alt="Relé térmico y contactor tablero Kayana" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-tableros">Tableros</span><br>
+              Relé térmico y contactor — protección de motor de bomba.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MINISTERIO DE EDUCACION -->
+      <div class="client-section" data-categories="generadores">
+        <div class="client-header">
+          <h2>Ministerio de Educación</h2>
+          <span class="client-badge cat-generadores">Generadores</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/mineducacion-generadores-cummins-01.jpg" data-caption="Placa técnica de generador Cummins 781 kVA Standby — lectura y registro de datos para mantenimiento. Cliente: Ministerio de Educación.">
+            <img src="fotos/mineducacion-generadores-cummins-01.jpg" alt="Placa técnica Cummins 781 kVA" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-generadores">Generadores</span><br>
+              Generador Cummins 781 kVA Standby — registro técnico.
+            </div>
+          </div>
+          <div class="photo-card" data-full="fotos/mineducacion-generadores-baterias-02.jpg" data-caption="Banco de baterías de arranque de generador — revisión de conexiones y estado de carga. Cliente: Ministerio de Educación.">
+            <img src="fotos/mineducacion-generadores-baterias-02.jpg" alt="Baterías arranque generador MinEducación" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-generadores">Generadores</span><br>
+              Baterías de arranque — revisión de conexiones y estado.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MINISTERIO DE DEFENSA -->
+      <div class="client-section" data-categories="generadores">
+        <div class="client-header">
+          <h2>Ministerio de Defensa</h2>
+          <span class="client-badge cat-generadores">Mantenimiento</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/ministerio-defensa-mantenimiento-motores-01.jpg" data-caption="Mantenimiento y reparación de equipos de motor a combustión — revisión de componentes mecánicos. Cliente: Ministerio de Defensa.">
+            <img src="fotos/ministerio-defensa-mantenimiento-motores-01.jpg" alt="Mantenimiento equipos Ministerio Defensa" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-generadores">Mantenimiento</span><br>
+              Mantenimiento de equipos de motor a combustión.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MINISTERIO DEL EXTERIOR -->
+      <div class="client-section" data-categories="generadores">
+        <div class="client-header">
+          <h2>Ministerio del Exterior</h2>
+          <span class="client-badge cat-generadores">Generadores</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/ministerio-exterior-generadores-filtro-01.jpg" data-caption="Placa técnica Caterpillar en generador diésel — verificación de datos de motor y potencia. Cliente: Ministerio del Exterior.">
+            <img src="fotos/ministerio-exterior-generadores-filtro-01.jpg" alt="Placa Caterpillar generador Ministerio Exterior" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-generadores">Generadores</span><br>
+              Generador Caterpillar — placa técnica y datos de motor.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MINTEL -->
+      <div class="client-section" data-categories="hidraulicos">
+        <div class="client-header">
+          <h2>MINTEL</h2>
+          <span class="client-badge cat-hidraulicos">Hidráulicos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/mintel-hidraulicos-lavado-pozo-01.jpg" data-caption="Extracción de bomba sumergible desde pozo profundo — servicio de lavado y limpieza de pozo. Cliente: MINTEL.">
+            <img src="fotos/mintel-hidraulicos-lavado-pozo-01.jpg" alt="Extracción bomba sumergible pozo MINTEL" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-hidraulicos">Hidráulicos</span><br>
+              Extracción de bomba sumergible — lavado de pozo profundo.
+            </div>
+          </div>
+          <div class="photo-card" data-full="fotos/mintel-hidraulicos-pozo-interior-02.jpg" data-caption="Interior de pozo profundo con bomba sumergible — inspección previa a servicio de limpieza. Cliente: MINTEL.">
+            <img src="fotos/mintel-hidraulicos-pozo-interior-02.jpg" alt="Interior pozo sumergible MINTEL" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-hidraulicos">Hidráulicos</span><br>
+              Interior de pozo — inspección de bomba sumergible.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLUSBRAND -->
+      <div class="client-section" data-categories="generadores">
+        <div class="client-header">
+          <h2>Plusbrand</h2>
+          <span class="client-badge cat-generadores">Generadores</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/plusbrand-generadores-filtros-01.jpg" data-caption="Comparativo de filtros de aire — filtro usado vs filtro nuevo durante mantenimiento preventivo de generador. Cliente: Plusbrand.">
+            <img src="fotos/plusbrand-generadores-filtros-01.jpg" alt="Comparativo filtros de aire generador" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-generadores">Generadores</span><br>
+              Cambio de filtros de aire — mantenimiento preventivo.
+            </div>
+          </div>
+          <div class="photo-card" data-full="fotos/plusbrand-generadores-motor-02.jpg" data-caption="Componentes internos de generador — bomba de combustible y sistema de arranque revisados. Cliente: Plusbrand.">
+            <img src="fotos/plusbrand-generadores-motor-02.jpg" alt="Componentes internos generador Plusbrand" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-generadores">Generadores</span><br>
+              Componentes internos — bomba de combustible y arranque.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SALUD AUDITIVA -->
+      <div class="client-section" data-categories="tableros">
+        <div class="client-header">
+          <h2>Salud Auditiva</h2>
+          <span class="client-badge cat-tableros">Tableros</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/salud-auditiva-tableros-instalacion-01.jpg" data-caption="Técnico ISIYER realizando instalación eléctrica de toma de corriente — instalaciones internas. Cliente: Salud Auditiva.">
+            <img src="fotos/salud-auditiva-tableros-instalacion-01.jpg" alt="Técnico instalación eléctrica Salud Auditiva" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-tableros">Tableros</span><br>
+              Instalación eléctrica — técnico ISIYER en sitio.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECAP -->
+      <div class="client-section" data-categories="hidraulicos">
+        <div class="client-header">
+          <h2>SECAP</h2>
+          <span class="client-badge cat-hidraulicos">Hidráulicos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/secap-hidraulicos-valvulas-01.jpg" data-caption="Red de tuberías y válvulas de agua — diagnóstico y reparación de sistema hidráulico. Cliente: SECAP.">
+            <img src="fotos/secap-hidraulicos-valvulas-01.jpg" alt="Válvulas y tuberías sistema hidráulico SECAP" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-hidraulicos">Hidráulicos</span><br>
+              Red de tuberías y válvulas — diagnóstico y reparación.
+            </div>
+          </div>
+          <div class="photo-card" data-full="fotos/secap-hidraulicos-valvulas-02.jpg" data-caption="Conjunto de válvulas de corte y paso en sistema de distribución de agua. Cliente: SECAP.">
+            <img src="fotos/secap-hidraulicos-valvulas-02.jpg" alt="Válvulas distribución agua SECAP" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-hidraulicos">Hidráulicos</span><br>
+              Válvulas de corte y paso — sistema de distribución de agua.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TENNIS DIX -->
+      <div class="client-section" data-categories="climatizacion">
+        <div class="client-header">
+          <h2>Tennis Dix</h2>
+          <span class="client-badge cat-climatizacion">Climatización</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/tennis-dix-climatizacion-tuberias-01.jpg" data-caption="Instalación de tuberías de cobre para refrigerante con unidades condensadoras en cubierta. Cliente: Tennis Dix.">
+            <img src="fotos/tennis-dix-climatizacion-tuberias-01.jpg" alt="Tuberías cobre refrigerante cubierta Tennis Dix" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-climatizacion">Climatización</span><br>
+              Tuberías de cobre y condensadoras — instalación en cubierta.
+            </div>
+          </div>
+          <div class="photo-card" data-full="fotos/tennis-dix-climatizacion-condensador-02.jpg" data-caption="Revisión técnica de serpentín condensador de bomba de calor — limpieza y mantenimiento. Cliente: Tennis Dix.">
+            <img src="fotos/tennis-dix-climatizacion-condensador-02.jpg" alt="Serpentín condensador bomba de calor Tennis Dix" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-climatizacion">Climatización</span><br>
+              Serpentín condensador — limpieza y mantenimiento.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TERRA CLUB -->
+      <div class="client-section" data-categories="hidraulicos">
+        <div class="client-header">
+          <h2>Terra Club</h2>
+          <span class="client-badge cat-hidraulicos">Hidráulicos</span>
+        </div>
+        <div class="photo-grid">
+          <div class="photo-card" data-full="fotos/terra-club-hidraulicos-bomba-piscina-01.jpg" data-caption="Bomba de agua para piscina instalada con tuberías — mantenimiento de sistema hidráulico. Cliente: Terra Club.">
+            <img src="fotos/terra-club-hidraulicos-bomba-piscina-01.jpg" alt="Bomba piscina Terra Club" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-hidraulicos">Hidráulicos</span><br>
+              Bomba de agua para piscina — mantenimiento y reparación.
+            </div>
+          </div>
+          <div class="photo-card" data-full="fotos/terra-club-hidraulicos-piscina-02.jpg" data-caption="Piscina intervenida durante servicio de mantenimiento hidráulico. Cliente: Terra Club.">
+            <img src="fotos/terra-club-hidraulicos-piscina-02.jpg" alt="Piscina mantenimiento hidráulico Terra Club" loading="lazy" decoding="async" />
+            <div class="photo-card-caption">
+              <span class="cat-tag cat-hidraulicos">Hidráulicos</span><br>
+              Mantenimiento integral de sistema hidráulico de piscina.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <strong>ISIYER S.A.S.</strong><br />
+        Ingeniería en Sistemas Industriales y Energía Renovable
+      </div>
+      <div>Quito · Ecuador · 0983881253 · ventas@isiyer.com</div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/593983881253" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">✆</a>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen">×</button>
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="Vista ampliada del trabajo realizado" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    const chips = document.querySelectorAll('.filter-chip');
+    const sections = document.querySelectorAll('.client-section');
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const filter = chip.dataset.filter;
+        sections.forEach(sec => {
+          const cats = sec.dataset.categories || '';
+          sec.classList.toggle('hidden', filter !== 'todos' && !cats.includes(filter));
+        });
+      });
+    });
+
+    const cards = document.querySelectorAll('.photo-card');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => {
+        lightboxImage.src = card.dataset.full;
+        lightboxCaption.textContent = card.dataset.caption;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImage.src = '';
+    };
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+
+</body>
+</html>
