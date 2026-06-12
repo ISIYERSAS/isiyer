@@ -18,6 +18,14 @@
   <meta name="twitter:description" content="Revisión técnica de bombas, hidroneumáticos, generadores, tableros, climatización y calderas para clientes privados en Quito." />
   <meta name="twitter:image" content="1.jpeg" />
   <link rel="icon" type="image/png" href="ISIYERLOGO.png">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1HBVBWM2G4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1HBVBWM2G4');
+  </script>
+  <script src="analytics-isiyer.js" defer></script>
 
   <style>
     html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
@@ -1184,6 +1192,10 @@ ${mensaje}`;
 
       const numeroWhatsapp = '593983881253';
       const url = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(texto)}`;
+
+      if (typeof window.isiyerTrackWhatsAppFormSubmit === 'function') {
+        window.isiyerTrackWhatsAppFormSubmit();
+      }
 
       window.open(url, '_blank');
     });
