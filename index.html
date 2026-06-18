@@ -321,6 +321,106 @@
       color: #eef5fc;
     }
 
+    .hero-carousel {
+      position: relative;
+      min-height: 270px;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 1.2rem;
+      background: #0a2944;
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      margin: 0;
+      opacity: 0;
+      animation: heroFade 12s infinite;
+    }
+
+    .hero-slide:first-child {
+      opacity: 1;
+    }
+
+    .hero-slide:nth-child(2) {
+      animation-delay: 6s;
+    }
+
+    .hero-slide img {
+      width: 100%;
+      height: 100%;
+      min-height: 270px;
+      object-fit: cover;
+    }
+
+    .hero-slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(5,15,26,0.05), rgba(5,15,26,0.58));
+    }
+
+    .hero-slide figcaption {
+      position: absolute;
+      left: 1rem;
+      right: 3.2rem;
+      bottom: 0.85rem;
+      z-index: 1;
+      color: #ffffff;
+      font-size: 0.92rem;
+      font-weight: 700;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.35);
+    }
+
+    .hero-carousel-dots {
+      position: absolute;
+      right: 1rem;
+      bottom: 0.95rem;
+      z-index: 2;
+      display: flex;
+      gap: 0.45rem;
+    }
+
+    .hero-carousel-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.55);
+      animation: heroDot 12s infinite;
+    }
+
+    .hero-carousel-dots span:nth-child(2) {
+      animation-delay: 6s;
+    }
+
+    @keyframes heroFade {
+      0%, 45% { opacity: 1; }
+      50%, 95% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes heroDot {
+      0%, 45% { background: #ffffff; transform: scale(1.25); }
+      50%, 95% { background: rgba(255,255,255,0.55); transform: scale(1); }
+      100% { background: #ffffff; transform: scale(1.25); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-slide,
+      .hero-carousel-dots span {
+        animation: none;
+      }
+
+      .hero-slide {
+        opacity: 0;
+      }
+
+      .hero-slide:first-child {
+        opacity: 1;
+      }
+    }
+
     .section {
       padding: 4.8rem 0;
     }
@@ -756,6 +856,8 @@
       .hero p { font-size: 1rem; }
       .hero-actions .btn { width: 100%; min-height: 50px; }
       .hero-points span { width: 100%; }
+      .hero-carousel { min-height: 220px; }
+      .hero-slide img { min-height: 220px; }
       .brand img { width: 56px; height: 56px; }
       .gallery figcaption { min-height: 0; }
       .whatsapp-float {
@@ -845,6 +947,20 @@
         </div>
 
         <aside class="hero-card">
+          <div class="hero-carousel" aria-label="Trabajos técnicos de ISIYER">
+            <figure class="hero-slide">
+              <img src="fotos/generador-tecnico-panel-control-quito-01.webp" alt="Técnico revisando panel de control de generador eléctrico en Quito" loading="eager" decoding="async" />
+              <figcaption>Revisión técnica de generador eléctrico.</figcaption>
+            </figure>
+            <figure class="hero-slide">
+              <img src="fotos/sistema-hidroneumatico-bombas-rojas-quito-01.webp" alt="Sistema hidroneumático con bombas rojas y tanque de presión en Quito" loading="eager" decoding="async" />
+              <figcaption>Sistema hidroneumático con bombas y tanque.</figcaption>
+            </figure>
+            <div class="hero-carousel-dots" aria-hidden="true">
+              <span></span>
+              <span></span>
+            </div>
+          </div>
           <h3>¿Qué problema necesita resolver?</h3>
           <ul>
             <li>Reparación de bombas en Quito y revisión de baja presión de agua.</li>
