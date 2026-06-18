@@ -25,6 +25,7 @@ font-family:Arial, Helvetica, sans-serif;
 margin:0;
 background:#f5f7fa;
 color:#333;
+line-height:1.6;
 }
 
 header{
@@ -56,29 +57,114 @@ text-decoration:underline;
 }
 
 .hero{
-padding:60px 20px;
-text-align:center;
-background:linear-gradient(rgba(15,59,99,0.9), rgba(15,59,99,0.9)), url("instalacion.jpeg");
-background-size:cover;
-background-position:center;
+padding:70px 20px;
+background:linear-gradient(135deg,#0f3b63 0%,#0a2944 100%);
 color:white;
 }
 
-.hero h2{
-font-size:40px;
+.hero-inner{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:minmax(0,1.05fr) minmax(280px,0.95fr);
+gap:34px;
+align-items:center;
+}
+
+.hero-kicker{
+display:inline-block;
+font-weight:bold;
+letter-spacing:.04em;
+text-transform:uppercase;
+font-size:13px;
+color:#b7e4c7;
 margin-bottom:10px;
+}
+
+.hero h2{
+font-size:clamp(32px,5vw,48px);
+line-height:1.12;
+margin:0 0 16px;
 }
 
 .hero p{
 max-width:800px;
-margin:auto;
+margin:0;
 font-size:18px;
+color:#eef6ff;
+}
+
+.hero-actions{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+margin-top:26px;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:48px;
+padding:13px 22px;
+border-radius:999px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.btn-primary{
+background:#25D366;
+color:white;
+box-shadow:0 10px 24px rgba(37,211,102,.25);
+}
+
+.btn-secondary{
+background:white;
+color:#0f3b63;
+}
+
+.hero-photo{
+background:white;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 22px 50px rgba(0,0,0,.22);
+margin:0;
+}
+
+.hero-photo img{
+width:100%;
+height:360px;
+object-fit:cover;
+display:block;
+}
+
+.hero-photo figcaption{
+margin:0;
+padding:14px 16px;
+color:#4b5563;
+font-size:14px;
+background:white;
 }
 
 .container{
 max-width:1100px;
 margin:auto;
 padding:40px 20px;
+}
+
+.section-heading{
+max-width:760px;
+margin-bottom:24px;
+}
+
+.section-heading h2{
+margin-bottom:8px;
+color:#0f3b63;
+}
+
+.section-heading p{
+margin:0;
+color:#5f6b7a;
 }
 
 .grid{
@@ -92,11 +178,24 @@ background:white;
 padding:25px;
 border-radius:10px;
 box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border:1px solid #e3e9f0;
 }
 
 .card h3{
-margin-top:0;
+margin:10px 0 10px;
 color:#0f3b63;
+}
+
+.service-number{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:42px;
+height:42px;
+border-radius:50%;
+background:#eaf7ef;
+color:#16803c;
+font-weight:bold;
 }
 
 .gallery{
@@ -105,9 +204,27 @@ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:15px;
 }
 
+.work-card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+border:1px solid #e3e9f0;
+margin:0;
+}
+
 .gallery img{
 width:100%;
-border-radius:8px;
+height:220px;
+object-fit:cover;
+display:block;
+}
+
+.work-card figcaption{
+padding:13px 15px;
+color:#4b5563;
+font-size:15px;
+font-weight:bold;
 }
 
 .cta{
@@ -126,11 +243,71 @@ text-decoration:none;
 font-weight:bold;
 }
 
+.cta-actions{
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
+margin-top:22px;
+}
+
+.cta .call-link{
+background:white;
+color:#0f3b63;
+}
+
+.whatsapp-float{
+position:fixed;
+right:18px;
+bottom:18px;
+z-index:50;
+width:58px;
+height:58px;
+border-radius:50%;
+background:#25D366;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+text-decoration:none;
+box-shadow:0 12px 28px rgba(37,211,102,.35);
+}
+
 footer{
 background:#0a2944;
 color:white;
 text-align:center;
 padding:20px;
+}
+
+@media (max-width:760px){
+nav a{
+display:inline-block;
+margin:6px 8px;
+}
+
+.hero{
+padding:44px 18px;
+}
+
+.hero-inner{
+grid-template-columns:1fr;
+gap:24px;
+}
+
+.hero-photo img{
+height:260px;
+}
+
+.hero-actions .btn,
+.cta-actions a{
+width:100%;
+}
+
+.container{
+padding:34px 18px;
+}
 }
 
 </style>
@@ -156,25 +333,46 @@ padding:20px;
 
 <section class="hero">
 
+<div class="hero-inner">
+
+<div>
+<span class="hero-kicker">Servicio técnico en Quito</span>
+
 <h2>Reparación y mantenimiento de bombas de agua e hidroneumáticos en Quito</h2>
 
 <p>
-Servicio técnico para diagnóstico, reparación y mantenimiento de bombas de agua
-y sistemas hidroneumáticos en edificios, conjuntos residenciales, casas,
-locales comerciales y pequeñas empresas. Atendemos problemas de presión de agua,
-bombas dañadas, equipos que prenden y apagan constantemente, ruido, vibración o fugas.
+Diagnóstico, reparación y mantenimiento para edificios, conjuntos residenciales,
+casas, locales comerciales y pequeñas empresas con baja presión de agua,
+bombas dañadas o sistemas hidroneumáticos inestables.
 </p>
+
+<div class="hero-actions">
+<a class="btn btn-primary" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20ayuda%20con%20reparaci%C3%B3n%20o%20mantenimiento%20de%20una%20bomba%20de%20agua%20o%20sistema%20hidroneum%C3%A1tico%20en%20Quito.%20%C2%BFMe%20pueden%20orientar%3F" target="_blank">Solicitar revisión por WhatsApp</a>
+<a class="btn btn-secondary" href="tel:+593983881253">Llamar ahora: 098 388 1253</a>
+</div>
+</div>
+
+<figure class="hero-photo">
+<img src="fotos/sistema-hidroneumatico-bombas-rojas-quito-01.webp" alt="Sistema hidroneumatico con bombas de agua en Quito">
+<figcaption>Sistema hidroneumático con bombas y tanque de presión.</figcaption>
+</figure>
+
+</div>
 
 </section>
 
 
 <section class="container">
 
+<div class="section-heading">
 <h2>Servicios que ofrecemos</h2>
+<p>Atención técnica para fallas de presión, bombas dañadas, mantenimiento preventivo y revisión de sistemas hidroneumáticos.</p>
+</div>
 
 <div class="grid">
 
 <div class="card">
+<span class="service-number">01</span>
 <h3>Mantenimiento preventivo</h3>
 <p>
 Revisión integral de bombas para edificios, conjuntos residenciales, casas y comercios:
@@ -183,6 +381,7 @@ presiones de trabajo, tablero de control, conexiones y estado general de compone
 </div>
 
 <div class="card">
+<span class="service-number">02</span>
 <h3>Reparación de bombas de agua</h3>
 <p>
 Diagnóstico de bombas con fallas de arranque, baja presión de agua,
@@ -191,6 +390,7 @@ funcionamiento irregular, ruido, vibración, fugas o falta de suministro.
 </div>
 
 <div class="card">
+<span class="service-number">03</span>
 <h3>Sistemas hidroneumáticos</h3>
 <p>
 Reparación y mantenimiento de sistemas hidroneumáticos que no mantienen presión,
@@ -199,6 +399,7 @@ presentan ciclos inestables o afectan el abastecimiento de agua.
 </div>
 
 <div class="card">
+<span class="service-number">04</span>
 <h3>Optimización de presión de agua</h3>
 <p>
 Revisión técnica para corregir baja presión, edificio o casa sin agua,
@@ -213,14 +414,32 @@ arranques frecuentes y fallas asociadas al sistema de bombeo.
 
 <section class="container">
 
+<div class="section-heading">
 <h2>Trabajos realizados</h2>
+<p>Referencias visuales de sistemas de bombeo, salas de máquinas y equipos asociados.</p>
+</div>
 
 <div class="gallery">
 
-<img src="fotos/sistema-hidroneumatico-bomba-agua-quito-01.webp" alt="Sistema hidroneumatico con bomba de agua en Quito">
+<figure class="work-card">
+<img src="fotos/sistema-hidroneumatico-bombas-rojas-quito-01.webp" alt="Sistema hidroneumatico con bombas de agua en Quito">
+<figcaption>Sistema hidroneumático con bombas y tanque.</figcaption>
+</figure>
+
+<figure class="work-card">
+<img src="fotos/sala-maquinas-sistema-bombeo-quito-02.webp" alt="Sala de maquinas con sistema de bombeo en Quito">
+<figcaption>Sala de máquinas con sistema de bombeo.</figcaption>
+</figure>
+
+<figure class="work-card">
 <img src="fotos/bombas-agua-sala-maquinas-quito-02.webp" alt="Bombas de agua instaladas en sala de maquinas en Quito">
-<img src="fotos/sistema-bombas-hidroneumatico-quito-03.webp" alt="Sistema de bombas e hidroneumatico para presion de agua en Quito">
-<img src="fotos/tablero-control-bombas-agua-quito-04.webp" alt="Tablero de control para bombas de agua en Quito">
+<figcaption>Bombas instaladas en sala de máquinas.</figcaption>
+</figure>
+
+<figure class="work-card">
+<img src="fotos/equipo-tecnico-mantenimiento-bombas-quito-01.webp" alt="Equipo tecnico realizando mantenimiento de bombas en Quito">
+<figcaption>Equipo técnico en mantenimiento de bombas.</figcaption>
+</figure>
 
 </div>
 
@@ -233,13 +452,19 @@ arranques frecuentes y fallas asociadas al sistema de bombeo.
 
 <p>Solicite diagnóstico, reparación de bombas en Quito o mantenimiento preventivo de su sistema de agua.</p>
 
-<br>
+<div class="cta-actions">
 
 <a href="https://wa.me/593983881253?text=Hola%2C%20necesito%20ayuda%20con%20reparaci%C3%B3n%20o%20mantenimiento%20de%20una%20bomba%20de%20agua%20o%20sistema%20hidroneum%C3%A1tico%20en%20Quito.%20%C2%BFMe%20pueden%20orientar%3F" target="_blank">
 Solicitar revisión por WhatsApp
 </a>
 
+<a class="call-link" href="tel:+593983881253">Llamar ahora: 098 388 1253</a>
+
+</div>
+
 </section>
+
+<a class="whatsapp-float" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20ayuda%20con%20reparaci%C3%B3n%20o%20mantenimiento%20de%20una%20bomba%20de%20agua%20o%20sistema%20hidroneum%C3%A1tico%20en%20Quito.%20%C2%BFMe%20pueden%20orientar%3F" target="_blank" aria-label="Escribir por WhatsApp">WA</a>
 
 
 <footer>
