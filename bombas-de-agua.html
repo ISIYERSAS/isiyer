@@ -1,484 +1,638 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es-EC">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reparación de bombas de agua en Quito | ISIYER</title>
+  <meta name="description" content="Diagnóstico, reparación y mantenimiento de bombas de agua y sistemas hidroneumáticos para edificios, conjuntos, casas y locales en Quito y sus valles.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://www.isiyer.com/bombas-de-agua.html">
+  <link rel="icon" type="image/png" href="ISIYERLOGO.png">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_EC">
+  <meta property="og:site_name" content="ISIYER">
+  <meta property="og:title" content="Reparación de bombas de agua en Quito | ISIYER">
+  <meta property="og:description" content="Diagnóstico técnico de bombas de agua y sistemas hidroneumáticos para edificios, conjuntos, casas y comercios en Quito y valles.">
+  <meta property="og:url" content="https://www.isiyer.com/bombas-de-agua.html">
+  <meta property="og:image" content="https://www.isiyer.com/fotos/sistema-hidroneumatico-edificio-quito.webp">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="Sistema hidroneumático con bombas, tanques y control">
 
-<title>Reparación y mantenimiento de bombas de agua en Quito | ISIYER</title>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Reparación de bombas de agua en Quito | ISIYER">
+  <meta name="twitter:description" content="Diagnóstico técnico de bombas de agua y sistemas hidroneumáticos para edificios, conjuntos, casas y comercios en Quito y valles.">
+  <meta name="twitter:image" content="https://www.isiyer.com/fotos/sistema-hidroneumatico-edificio-quito.webp">
+  <meta name="twitter:image:alt" content="Sistema hidroneumático con bombas, tanques y control">
 
-<meta name="description" content="Reparación, diagnóstico y mantenimiento de bombas de agua y sistemas hidroneumáticos en Quito para edificios, conjuntos residenciales, casas, locales comerciales y pequeñas empresas.">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1HBVBWM2G4"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-1HBVBWM2G4');
-</script>
-<script src="analytics-isiyer.js" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1HBVBWM2G4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1HBVBWM2G4');
+  </script>
+  <script src="analytics-isiyer.js" defer></script>
 
-<style>
+  <style>
+    :root {
+      --navy: #082b49;
+      --blue: #0f4978;
+      --blue-soft: #eaf3f9;
+      --green: #148a47;
+      --green-bright: #25d366;
+      --ink: #17212b;
+      --muted: #566576;
+      --line: #dbe4ec;
+      --paper: #ffffff;
+      --surface: #f4f7fa;
+      --radius: 18px;
+      --shadow: 0 14px 38px rgba(8, 43, 73, .10);
+    }
 
-body{
-font-family:Arial, Helvetica, sans-serif;
-margin:0;
-background:#f5f7fa;
-color:#333;
-line-height:1.6;
-}
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+      overflow-wrap: break-word;
+    }
+    img { max-width: 100%; }
+    a { color: var(--blue); }
+    a:focus-visible, summary:focus-visible { outline: 3px solid #f3b61f; outline-offset: 3px; }
 
-header{
-background:#0f3b63;
-color:white;
-padding:20px;
-text-align:center;
-}
+    .site-header {
+      color: #fff;
+      background: var(--navy);
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+    .brand {
+      display: inline-flex;
+      flex-direction: column;
+      color: #fff;
+      text-decoration: none;
+    }
+    .brand-name { font-size: 1.28rem; font-weight: 800; letter-spacing: .04em; }
+    .brand-tagline { color: #cfe0ee; font-size: .78rem; }
+    .nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px 20px; }
+    .nav a { color: #fff; font-size: .93rem; font-weight: 700; text-decoration: none; }
+    .nav a:hover { text-decoration: underline; }
 
-header h1{
-margin:0;
-}
+    .breadcrumb-wrap { background: #f8fafc; border-bottom: 1px solid var(--line); }
+    .breadcrumb {
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 12px 0;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .breadcrumb a { font-weight: 700; text-decoration: none; }
+    .breadcrumb span { margin: 0 7px; }
 
-nav{
-background:#0a2944;
-padding:10px;
-text-align:center;
-}
+    .hero {
+      color: #fff;
+      background: linear-gradient(135deg, var(--navy), #0b426f 72%, #12618d);
+      padding: 72px 0 0;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(340px, .92fr);
+      gap: 48px;
+      align-items: center;
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+    .kicker {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: #9be2b8;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3 { line-height: 1.18; }
+    h1 { margin: 0 0 20px; font-size: clamp(2.25rem, 5vw, 4.15rem); letter-spacing: -.035em; }
+    .hero-lead { margin: 0; color: #e5f0f8; font-size: clamp(1.05rem, 2vw, 1.22rem); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 13px 22px;
+      border: 2px solid transparent;
+      border-radius: 999px;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: #062d19; background: #55df87; box-shadow: 0 10px 24px rgba(37, 211, 102, .2); }
+    .button-secondary { color: var(--navy); background: #fff; }
+    .hero-photo {
+      align-self: end;
+      margin: 0;
+      overflow: hidden;
+      color: var(--ink);
+      background: #fff;
+      border-radius: var(--radius) var(--radius) 0 0;
+      box-shadow: 0 24px 50px rgba(0, 0, 0, .25);
+    }
+    .hero-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .hero-photo figcaption { padding: 12px 16px; color: var(--muted); font-size: .88rem; }
 
-nav a{
-color:white;
-margin:0 15px;
-text-decoration:none;
-font-weight:bold;
-}
+    .trust-strip { margin-top: 0; color: #fff; background: #061f34; }
+    .trust-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      width: min(1160px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+    }
+    .trust-list li { padding: 20px 24px; border-left: 1px solid rgba(255,255,255,.14); font-weight: 700; }
+    .trust-list li:last-child { border-right: 1px solid rgba(255,255,255,.14); }
+    .trust-list li::before { content: "✓"; margin-right: 9px; color: #55df87; }
 
-nav a:hover{
-text-decoration:underline;
-}
+    .section { padding: 84px 0; }
+    .section-alt { background: var(--surface); }
+    .container { width: min(1160px, calc(100% - 40px)); margin: 0 auto; }
+    .section-heading { max-width: 800px; margin-bottom: 34px; }
+    .section-heading h2 { margin: 0 0 12px; color: var(--navy); font-size: clamp(1.75rem, 3.5vw, 2.65rem); letter-spacing: -.02em; }
+    .section-heading p { margin: 0; color: var(--muted); font-size: 1.05rem; }
+    .eyebrow { color: var(--green); font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 
-.hero{
-padding:70px 20px;
-background:linear-gradient(135deg,#0f3b63 0%,#0a2944 100%);
-color:white;
-}
+    .card-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card {
+      padding: 25px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(8, 43, 73, .05);
+    }
+    .card h3 { margin: 0 0 8px; color: var(--blue); font-size: 1.08rem; }
+    .card p { margin: 0; color: var(--muted); }
+    .problem-card { position: relative; padding-left: 54px; }
+    .problem-card::before {
+      content: "?";
+      position: absolute;
+      top: 24px;
+      left: 22px;
+      display: grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      color: var(--green);
+      background: #ddf6e7;
+      border-radius: 50%;
+      font-weight: 900;
+    }
 
-.hero-inner{
-max-width:1100px;
-margin:auto;
-display:grid;
-grid-template-columns:minmax(0,1.05fr) minmax(280px,0.95fr);
-gap:34px;
-align-items:center;
-}
+    .service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .service-card { border-top: 4px solid var(--green); }
+    .service-card p { font-size: .96rem; }
 
-.hero-kicker{
-display:inline-block;
-font-weight:bold;
-letter-spacing:.04em;
-text-transform:uppercase;
-font-size:13px;
-color:#b7e4c7;
-margin-bottom:10px;
-}
+    .inspection-layout { display: grid; grid-template-columns: .95fr 1.05fr; gap: 38px; align-items: start; }
+    .inspection-note { padding: 30px; color: #fff; background: var(--navy); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .inspection-note h2 { margin-top: 0; font-size: 2rem; }
+    .inspection-note p:last-child { margin-bottom: 0; }
+    .check-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px 18px; margin: 0; padding: 0; list-style: none; }
+    .check-list li { padding: 13px 14px 13px 40px; position: relative; background: #fff; border: 1px solid var(--line); border-radius: 10px; }
+    .check-list li::before { content: "✓"; position: absolute; left: 15px; color: var(--green); font-weight: 900; }
 
-.hero h2{
-font-size:clamp(32px,5vw,48px);
-line-height:1.12;
-margin:0 0 16px;
-}
+    .steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; padding: 0; list-style: none; counter-reset: steps; }
+    .steps li { counter-increment: steps; min-height: 220px; padding: 22px; background: #fff; border: 1px solid var(--line); border-radius: 14px; }
+    .steps li::before {
+      content: counter(steps, decimal-leading-zero);
+      display: block;
+      margin-bottom: 32px;
+      color: var(--green);
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
 
-.hero p{
-max-width:800px;
-margin:0;
-font-size:18px;
-color:#eef6ff;
-}
+    .audience-layout { display: grid; grid-template-columns: 1.1fr .9fr; gap: 32px; align-items: center; }
+    .audience-list { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 0; padding: 0; list-style: none; }
+    .audience-list li { padding: 9px 14px; color: var(--blue); background: var(--blue-soft); border-radius: 999px; font-weight: 700; }
+    .feature-box { padding: 32px; background: #fff; border-left: 5px solid var(--green); border-radius: 12px; box-shadow: var(--shadow); }
+    .feature-box h3 { margin-top: 0; color: var(--navy); }
+    .feature-box p:last-child { margin-bottom: 0; }
 
-.hero-actions{
-display:flex;
-gap:14px;
-flex-wrap:wrap;
-margin-top:26px;
-}
+    .gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .work-card { margin: 0; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: var(--shadow); }
+    .work-card img { display: block; width: 100%; height: 290px; object-fit: cover; }
+    .work-card figcaption { padding: 14px 16px; color: var(--muted); font-size: .93rem; font-weight: 700; }
 
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-min-height:48px;
-padding:13px 22px;
-border-radius:999px;
-text-decoration:none;
-font-weight:bold;
-}
+    .related-box { margin-top: 30px; padding: 25px; background: var(--blue-soft); border-radius: 14px; }
+    .related-box h3 { margin-top: 0; color: var(--navy); }
+    .related-links { display: flex; flex-wrap: wrap; gap: 10px; }
+    .related-links a { padding: 9px 13px; background: #fff; border: 1px solid #bfd3e2; border-radius: 999px; font-weight: 700; text-decoration: none; }
 
-.btn-primary{
-background:#25D366;
-color:white;
-box-shadow:0 10px 24px rgba(37,211,102,.25);
-}
+    .zones { padding: 44px; color: #fff; background: linear-gradient(125deg, var(--navy), var(--blue)); border-radius: var(--radius); }
+    .zones h2 { margin-top: 0; font-size: clamp(1.7rem, 3vw, 2.35rem); }
+    .zones p { margin-bottom: 0; color: #e7f1f8; font-size: 1.08rem; }
 
-.btn-secondary{
-background:white;
-color:#0f3b63;
-}
+    .faq-list { display: grid; gap: 12px; }
+    details { background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+    summary { cursor: pointer; padding: 20px 52px 20px 20px; position: relative; color: var(--navy); font-weight: 800; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; position: absolute; right: 20px; top: 14px; color: var(--green); font-size: 1.7rem; }
+    details[open] summary::after { content: "−"; }
+    details p { margin: 0; padding: 0 20px 20px; color: var(--muted); }
 
-.hero-photo{
-background:white;
-border-radius:16px;
-overflow:hidden;
-box-shadow:0 22px 50px rgba(0,0,0,.22);
-margin:0;
-}
+    .final-cta { padding: 76px 0; color: #fff; text-align: center; background: var(--navy); }
+    .final-cta .container { max-width: 850px; }
+    .final-cta h2 { margin: 0 0 16px; font-size: clamp(2rem, 4vw, 3rem); }
+    .final-cta p { margin: 0; color: #dbeaf4; font-size: 1.1rem; }
+    .final-cta .actions { justify-content: center; }
 
-.hero-photo img{
-width:100%;
-height:360px;
-object-fit:cover;
-display:block;
-}
+    footer { padding: 30px 20px; color: #d5e2ec; text-align: center; background: #051a2b; }
+    footer p { margin: 4px 0; }
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 20;
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      color: #06361d;
+      background: var(--green-bright);
+      border: 3px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
+      font-weight: 900;
+      text-decoration: none;
+    }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-.hero-photo figcaption{
-margin:0;
-padding:14px 16px;
-color:#4b5563;
-font-size:14px;
-background:white;
-}
+    @media (max-width: 980px) {
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .nav { justify-content: flex-start; }
+      .hero-grid, .inspection-layout, .audience-layout { grid-template-columns: 1fr; }
+      .hero-photo { width: min(640px, 100%); justify-self: center; }
+      .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:40px 20px;
-}
+    @media (max-width: 680px) {
+      .topbar, .breadcrumb, .hero-grid, .trust-list, .container { width: min(100% - 32px, 1160px); }
+      .brand-tagline { max-width: 260px; }
+      .nav { gap: 8px 14px; }
+      .hero { padding-top: 48px; }
+      h1 { font-size: 2.25rem; }
+      .actions .button { width: 100%; }
+      .trust-list, .card-grid, .service-grid, .check-list, .steps, .gallery { grid-template-columns: 1fr; }
+      .trust-list li { border-left: 0; border-bottom: 1px solid rgba(255,255,255,.14); padding: 15px 0; }
+      .trust-list li:last-child { border-right: 0; border-bottom: 0; }
+      .section { padding: 62px 0; }
+      .steps li { min-height: 0; }
+      .steps li::before { margin-bottom: 15px; }
+      .work-card img { height: 245px; }
+      .zones { padding: 28px 22px; }
+      .whatsapp-float { display: none; }
+    }
 
-.section-heading{
-max-width:760px;
-margin-bottom:24px;
-}
-
-.section-heading h2{
-margin-bottom:8px;
-color:#0f3b63;
-}
-
-.section-heading p{
-margin:0;
-color:#5f6b7a;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:20px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-border:1px solid #e3e9f0;
-}
-
-.card h3{
-margin:10px 0 10px;
-color:#0f3b63;
-}
-
-.service-number{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-width:42px;
-height:42px;
-border-radius:50%;
-background:#eaf7ef;
-color:#16803c;
-font-weight:bold;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-}
-
-.work-card{
-background:white;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-border:1px solid #e3e9f0;
-margin:0;
-}
-
-.gallery img{
-width:100%;
-height:220px;
-object-fit:cover;
-display:block;
-}
-
-.work-card figcaption{
-padding:13px 15px;
-color:#4b5563;
-font-size:15px;
-font-weight:bold;
-}
-
-.cta{
-background:#0f3b63;
-color:white;
-text-align:center;
-padding:50px 20px;
-}
-
-.cta a{
-background:#25D366;
-color:white;
-padding:15px 25px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.cta-actions{
-display:flex;
-justify-content:center;
-gap:14px;
-flex-wrap:wrap;
-margin-top:22px;
-}
-
-.cta .call-link{
-background:white;
-color:#0f3b63;
-}
-
-.whatsapp-float{
-position:fixed;
-right:18px;
-bottom:18px;
-z-index:50;
-width:58px;
-height:58px;
-border-radius:50%;
-background:#25D366;
-color:white;
-display:flex;
-align-items:center;
-justify-content:center;
-font-weight:bold;
-text-decoration:none;
-box-shadow:0 12px 28px rgba(37,211,102,.35);
-}
-
-footer{
-background:#0a2944;
-color:white;
-text-align:center;
-padding:20px;
-}
-
-@media (max-width:760px){
-nav a{
-display:inline-block;
-margin:6px 8px;
-}
-
-.hero{
-padding:44px 18px;
-}
-
-.hero-inner{
-grid-template-columns:1fr;
-gap:24px;
-}
-
-.hero-photo img{
-height:260px;
-}
-
-.hero-actions .btn,
-.cta-actions a{
-width:100%;
-}
-
-.container{
-padding:34px 18px;
-}
-}
-
-</style>
-
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .button { transition: none; }
+    }
+  </style>
 </head>
 
-
 <body>
+  <header class="site-header">
+    <div class="topbar">
+      <a class="brand" href="index.html" aria-label="ISIYER, ir al inicio">
+        <span class="brand-name">ISIYER S.A.S.</span>
+        <span class="brand-tagline">Ingeniería en Sistemas Industriales y Energía Renovable</span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="bombas-de-agua.html" aria-current="page">Bombas e hidroneumáticos</a>
+        <a href="tableros-electricos.html">Tableros eléctricos</a>
+        <a href="generadores-electricos.html">Generadores</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-<header>
-<h1>ISIYER S.A.S.</h1>
-<p>Ingeniería en Sistemas Industriales y Energía Renovable</p>
-</header>
+  <div class="breadcrumb-wrap">
+    <nav class="breadcrumb" aria-label="Migas de pan">
+      <a href="index.html">Inicio</a><span aria-hidden="true">/</span><span>Bombas de agua e hidroneumáticos</span>
+    </nav>
+  </div>
 
+  <main>
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <span class="kicker">Bombas e hidroneumáticos en Quito</span>
+          <h1>Reparación y mantenimiento de bombas de agua y sistemas hidroneumáticos en Quito</h1>
+          <p class="hero-lead">Diagnóstico técnico para edificios, conjuntos residenciales, casas, locales comerciales y pequeñas empresas con baja presión, bombas que no arrancan o sistemas hidroneumáticos inestables.</p>
+          <div class="actions">
+            <a class="button button-primary" data-cta-location="hero" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20de%20una%20bomba%20de%20agua%20o%20sistema%20hidroneum%C3%A1tico%20en%20Quito.%20Puedo%20enviar%20fotograf%C3%ADas%20y%20describir%20la%20falla." target="_blank" rel="noopener noreferrer">Solicitar revisión por WhatsApp</a>
+            <a class="button button-secondary" data-cta-location="hero" href="tel:+593983881253">Llamar al 098 388 1253</a>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="fotos/sistema-hidroneumatico-edificio-quito.webp" width="1600" height="1200" alt="Sistema hidroneumático con bombas, tanques y tablero de control" decoding="async" fetchpriority="high">
+          <figcaption>Sistema hidroneumático con bombas, tanques y control.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-<nav>
-<a href="index.html">Inicio</a>
-<a href="generadores-electricos.html">Generadores</a>
-<a href="bombas-de-agua.html">Bombas</a>
-<a href="aire-acondicionado.html">Aire acondicionado</a>
-</nav>
+    <div class="trust-strip" aria-label="Aspectos del servicio">
+      <ul class="trust-list">
+        <li>Diagnóstico mecánico, eléctrico e hidráulico.</li>
+        <li>Atención en Quito y valles.</li>
+        <li>Sistemas para edificios, conjuntos, casas y comercios.</li>
+      </ul>
+    </div>
 
+    <section class="section section-alt" id="problemas">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Señales que requieren revisión</span>
+          <h2>¿Qué problema presenta el sistema?</h2>
+          <p>Una misma señal puede tener causas distintas. Estas referencias ayudan a describir la falla, pero la causa debe confirmarse mediante inspección y pruebas.</p>
+        </div>
+        <div class="card-grid">
+          <article class="card problem-card"><h3>Bomba que no enciende</h3><p>Puede estar relacionado con alimentación eléctrica, protecciones, contactores, sensores, conexiones o una condición interna del motor o la bomba.</p></article>
+          <article class="card problem-card"><h3>Baja presión de agua</h3><p>Puede estar relacionada con regulación, pérdida de rendimiento, fugas, obstrucciones, válvulas, nivel de cisterna o demanda del sistema.</p></article>
+          <article class="card problem-card"><h3>Bomba que trabaja continuamente</h3><p>Puede estar relacionado con una presión de parada no alcanzada, consumo permanente, fuga, válvula defectuosa o desempeño insuficiente.</p></article>
+          <article class="card problem-card"><h3>Arranques y paradas frecuentes</h3><p>Puede estar relacionado con la precarga o membrana del tanque, regulación del presostato, fugas o un volumen de acumulación insuficiente.</p></article>
+          <article class="card problem-card"><h3>Ruido o vibración excesiva</h3><p>Puede estar relacionado con rodamientos, desalineación, cavitación, fijaciones, impulsor, tuberías o condiciones de succión.</p></article>
+          <article class="card problem-card"><h3>Pérdida de cebado</h3><p>Puede estar relacionada con entrada de aire, válvula de pie, uniones, nivel de agua o problemas en la línea de succión.</p></article>
+          <article class="card problem-card"><h3>Fugas de agua o sello mecánico</h3><p>Una fuga puede estar relacionada con el sello, juntas, conexiones, eje o condiciones de operación; conviene identificar su origen antes de intervenir.</p></article>
+          <article class="card problem-card"><h3>Tanque hidroneumático sin presión</h3><p>Puede estar relacionado con pérdida de precarga, válvula de aire, membrana o condiciones de configuración del sistema.</p></article>
+          <article class="card problem-card"><h3>Presostato o manómetro con fallas</h3><p>Lecturas erráticas o cambios de presión fuera de lo esperado pueden estar relacionados con regulación, obstrucción, desgaste o conexión del instrumento.</p></article>
+          <article class="card problem-card"><h3>Tablero o sensor de nivel defectuoso</h3><p>Puede estar relacionado con protecciones, contactores, cableado, selector, relés, señal de nivel o alimentación eléctrica.</p></article>
+        </div>
+      </div>
+    </section>
 
-<section class="hero">
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Alcance técnico</span>
+          <h2>Servicios de bombas e hidroneumáticos</h2>
+          <p>El alcance se define después de revisar el equipo, la instalación y la condición reportada. La intervención puede abarcar componentes hidráulicos, mecánicos y eléctricos.</p>
+        </div>
+        <div class="service-grid">
+          <article class="card service-card"><h3>Diagnóstico de sistemas de bombeo</h3><p>Inspección de la condición reportada y pruebas aplicables al sistema.</p></article>
+          <article class="card service-card"><h3>Reparación de bombas</h3><p>Revisión y reparación de bombas centrífugas y periféricas según su condición.</p></article>
+          <article class="card service-card"><h3>Mantenimiento preventivo</h3><p>Revisión programada para identificar desgaste, desviaciones y necesidades de ajuste.</p></article>
+          <article class="card service-card"><h3>Mantenimiento correctivo</h3><p>Intervención sobre fallas confirmadas y componentes incluidos en el alcance.</p></article>
+          <article class="card service-card"><h3>Instalación y reemplazo de bombas</h3><p>Revisión de compatibilidad, conexiones y funcionamiento de la bomba instalada.</p></article>
+          <article class="card service-card"><h3>Sistemas hidroneumáticos</h3><p>Mantenimiento de bombas, tanques de presión, control e interconexiones.</p></article>
+          <article class="card service-card"><h3>Tanques de presión</h3><p>Revisión del tanque y carga de aire conforme a la configuración del sistema.</p></article>
+          <article class="card service-card"><h3>Presostatos y manómetros</h3><p>Inspección de regulación, lectura, conexión y respuesta de los instrumentos.</p></article>
+          <article class="card service-card"><h3>Tableros y protecciones</h3><p>Revisión de control, alimentación, maniobra y protecciones asociadas al bombeo.</p></article>
+          <article class="card service-card"><h3>Cisterna y línea de succión</h3><p>Revisión de nivel, válvulas, tuberías, uniones y condiciones de aspiración.</p></article>
+          <article class="card service-card"><h3>Limpieza y desinfección de cisternas</h3><p>Disponible cuando forma parte del servicio contratado y del alcance acordado.</p></article>
+        </div>
+      </div>
+    </section>
 
-<div class="hero-inner">
+    <section class="section section-alt" id="revision">
+      <div class="container inspection-layout">
+        <div class="inspection-note">
+          <span class="eyebrow" style="color:#9be2b8">Revisión integral</span>
+          <h2>¿Qué revisamos?</h2>
+          <p>ISIYER evalúa el sistema de bombeo completo, no solamente la bomba aislada. La revisión se realiza <strong>según el tipo de sistema y alcance del diagnóstico</strong>.</p>
+          <p>Esto permite relacionar la condición del equipo con la succión, la presión, el control eléctrico, el tanque y la disponibilidad de agua en la cisterna.</p>
+        </div>
+        <ul class="check-list">
+          <li>Cuerpo de bomba</li><li>Impulsor</li><li>Eje</li><li>Sello mecánico</li><li>Rodamientos</li><li>Motor eléctrico</li><li>Aislamiento</li><li>Alimentación eléctrica</li><li>Contactores y protecciones</li><li>Tubería de succión</li><li>Válvula de pie y válvula check</li><li>Tanque hidroneumático</li><li>Precarga de aire</li><li>Presostato</li><li>Manómetro</li><li>Sensores de nivel</li><li>Presión de arranque y parada</li><li>Cisterna y válvulas accesibles</li>
+        </ul>
+      </div>
+    </section>
 
-<div>
-<span class="hero-kicker">Servicio técnico en Quito</span>
+    <section class="section" id="proceso">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Proceso de atención</span>
+          <h2>Cómo trabajamos</h2>
+          <p>La información inicial ayuda a preparar la revisión. El alcance final depende de la inspección y de las condiciones encontradas.</p>
+        </div>
+        <ol class="steps">
+          <li>El cliente informa el problema por WhatsApp o llamada.</li>
+          <li>Se solicitan fotografías, ubicación y datos básicos del sistema.</li>
+          <li>Se realiza inspección y diagnóstico técnico.</li>
+          <li>Se presenta el alcance del trabajo o proforma.</li>
+          <li>Se ejecuta el servicio y se realizan pruebas funcionales.</li>
+        </ol>
+      </div>
+    </section>
 
-<h2>Reparación y mantenimiento de bombas de agua e hidroneumáticos en Quito</h2>
+    <section class="section section-alt" id="clientes">
+      <div class="container audience-layout">
+        <div>
+          <div class="section-heading">
+            <span class="eyebrow">Aplicaciones residenciales y comerciales</span>
+            <h2>¿A quiénes atendemos?</h2>
+            <p>Atendemos sistemas de abastecimiento y presión de agua para distintos tipos de inmuebles y operaciones en Quito y valles.</p>
+          </div>
+          <ul class="audience-list">
+            <li>Edificios</li><li>Conjuntos residenciales</li><li>Casas</li><li>Locales comerciales</li><li>Oficinas</li><li>Pequeñas empresas</li><li>Instituciones</li>
+          </ul>
+        </div>
+        <aside class="feature-box">
+          <h3>Especial atención a edificios y conjuntos</h3>
+          <p>Esta página está orientada especialmente a administradores y propietarios que necesitan revisar bombas, tanques, tableros, sensores, cisterna y redes asociadas al abastecimiento de varias unidades.</p>
+          <p>Para orientar la visita conviene informar cuántas bombas existen, qué señal presenta el sistema y si el problema afecta a todo el inmueble o a zonas específicas.</p>
+        </aside>
+      </div>
+    </section>
 
-<p>
-Diagnóstico, reparación y mantenimiento para edificios, conjuntos residenciales,
-casas, locales comerciales y pequeñas empresas con baja presión de agua,
-bombas dañadas o sistemas hidroneumáticos inestables.
-</p>
+    <section class="section" id="trabajos-reales">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Registro fotográfico propio</span>
+          <h2>Trabajos reales</h2>
+          <p>Fotografías de sistemas y componentes intervenidos por ISIYER. Los captions describen únicamente lo visible, sin atribuir fallas, resultados o clientes.</p>
+        </div>
+        <div class="gallery">
+          <figure class="work-card">
+            <img src="fotos/sistema-hidroneumatico-edificio-quito.webp" width="1600" height="1200" alt="Sistema hidroneumático con bombas, tanques y tablero de control" loading="lazy" decoding="async">
+            <figcaption>Sistema hidroneumático con bombas, tanques y control.</figcaption>
+          </figure>
+          <figure class="work-card">
+            <img src="fotos/bombas-tanque-presion-quito.webp" width="1600" height="2133" alt="Sala de máquinas con bombas y tanque de presión" loading="lazy" decoding="async">
+            <figcaption>Sala de máquinas con bombas y tanque de presión.</figcaption>
+          </figure>
+          <figure class="work-card">
+            <img src="fotos/diagnostico-sistema-bombeo-cisterna-quito.webp" width="1600" height="2128" alt="Técnico inspeccionando tuberías y bombas junto a una cisterna" loading="lazy" decoding="async">
+            <figcaption>Inspección técnica de sistema de bombeo y cisterna.</figcaption>
+          </figure>
+          <figure class="work-card">
+            <img src="fotos/reparacion-motor-bomba-agua-quito.webp" width="1600" height="1856" alt="Bobinado interno de motor eléctrico de bomba" loading="lazy" decoding="async">
+            <figcaption>Revisión interna de motor de bomba.</figcaption>
+          </figure>
+          <figure class="work-card">
+            <img src="fotos/medicion-presion-hidroneumatico-quito.webp" width="1600" height="2133" alt="Manómetro instalado junto a un tanque hidroneumático" loading="lazy" decoding="async">
+            <figcaption>Medición de presión en tanque hidroneumático.</figcaption>
+          </figure>
+          <figure class="work-card">
+            <img src="fotos/instalacion-bomba-agua-quito.webp" width="1600" height="1200" alt="Bomba y motor eléctricos instalados en tubería de abastecimiento" loading="lazy" decoding="async">
+            <figcaption>Bomba instalada en sistema de abastecimiento.</figcaption>
+          </figure>
+        </div>
 
-<div class="hero-actions">
-<a class="btn btn-primary" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20ayuda%20con%20reparaci%C3%B3n%20o%20mantenimiento%20de%20una%20bomba%20de%20agua%20o%20sistema%20hidroneum%C3%A1tico%20en%20Quito.%20%C2%BFMe%20pueden%20orientar%3F" target="_blank">Solicitar revisión por WhatsApp</a>
-<a class="btn btn-secondary" href="tel:+593983881253">Llamar ahora: 098 388 1253</a>
-</div>
-</div>
+        <div class="related-box">
+          <h3>Servicios relacionados con el sistema de bombeo</h3>
+          <p>Cuando la falla involucra maniobra, protecciones o respaldo de energía, la revisión puede relacionarse con otros servicios electromecánicos.</p>
+          <div class="related-links">
+            <a href="tableros-electricos.html">Tableros eléctricos para control de bombas</a>
+            <a href="generadores-electricos.html">Mantenimiento de generadores eléctricos</a>
+            <a href="index.html#servicios">Mantenimiento electromecánico en Quito</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<figure class="hero-photo">
-<img src="fotos/sistema-hidroneumatico-bombas-rojas-quito-01.webp" alt="Sistema hidroneumatico con bombas de agua en Quito">
-<figcaption>Sistema hidroneumático con bombas y tanque de presión.</figcaption>
-</figure>
+    <section class="section section-alt" id="zonas">
+      <div class="container">
+        <div class="zones">
+          <h2>Zonas de atención</h2>
+          <p>Atendemos en Quito y valles, incluyendo Quito Norte, Ponceano, Carcelén, El Condado, Calderón, Cumbayá, Tumbaco, Conocoto, Sangolquí y Rumiñahui.</p>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <section class="section section-alt" id="preguntas-frecuentes">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Orientación inicial</span>
+          <h2>Preguntas frecuentes</h2>
+          <p>Respuestas generales para describir la condición del sistema. El diagnóstico depende de mediciones e inspección en cada instalación.</p>
+        </div>
+        <div class="faq-list">
+          <details><summary>¿Por qué una bomba enciende pero no sube agua?</summary><p>Puede haber pérdida de cebado, entrada de aire, bajo nivel de cisterna, una válvula cerrada o defectuosa, obstrucción, giro incorrecto o desgaste hidráulico. Se debe revisar la succión y la bomba antes de concluir la causa.</p></details>
+          <details><summary>¿Qué causa baja presión en un edificio?</summary><p>Puede estar relacionada con demanda, regulación, tanque, bomba, tuberías, válvulas, fugas, nivel de cisterna o control. La revisión debe considerar el sistema completo y la presión en distintos puntos.</p></details>
+          <details><summary>¿Por qué una bomba arranca y se apaga constantemente?</summary><p>Los ciclos cortos pueden estar relacionados con precarga insuficiente, membrana del tanque, ajustes del presostato, fugas o capacidad de acumulación. La presión de arranque y parada debe medirse.</p></details>
+          <details><summary>¿Cómo saber si el tanque hidroneumático perdió presión?</summary><p>Los arranques frecuentes o una presión inestable pueden ser señales, pero no son concluyentes. La precarga se verifica con un procedimiento adecuado y el sistema hidráulico sin presión.</p></details>
+          <details><summary>¿Reparan motores y bombas centrífugas?</summary><p>Sí. ISIYER revisa bombas centrífugas, bombas periféricas y motores eléctricos para definir si el equipo es reparable y qué componentes requiere el trabajo.</p></details>
+          <details><summary>¿Revisan tableros de control y sensores de nivel?</summary><p>Sí, cuando forman parte del alcance. Se pueden revisar alimentación, protecciones, contactores, relés, selectores, cableado y señales de nivel asociadas al bombeo.</p></details>
+          <details><summary>¿Atienden edificios y conjuntos residenciales?</summary><p>Sí. La atención está orientada especialmente a sistemas de agua para edificios y conjuntos, además de casas, locales, oficinas, pequeñas empresas e instituciones.</p></details>
+          <details><summary>¿Cuándo conviene reparar y cuándo reemplazar una bomba?</summary><p>Depende del daño, disponibilidad de repuestos, condición del motor y partes hidráulicas, compatibilidad con el sistema y costo de la intervención. La decisión se plantea después del diagnóstico.</p></details>
+          <details><summary>¿Cómo solicito una revisión técnica?</summary><p>Escriba por WhatsApp o llame al 098 388 1253. Envíe fotografías, ubicación y una descripción de la falla para orientar la información inicial y coordinar la atención.</p></details>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <section class="final-cta" id="contacto-bombas">
+      <div class="container">
+        <h2>¿Tiene baja presión, una bomba dañada o un sistema hidroneumático inestable?</h2>
+        <p>Envíenos fotografías y una descripción del problema para orientar la revisión inicial y coordinar la atención técnica en Quito.</p>
+        <div class="actions">
+          <a class="button button-primary" data-cta-location="final" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20de%20una%20bomba%20de%20agua%20o%20sistema%20hidroneum%C3%A1tico%20en%20Quito.%20Puedo%20enviar%20fotograf%C3%ADas%20y%20describir%20la%20falla." target="_blank" rel="noopener noreferrer">Solicitar revisión por WhatsApp</a>
+          <a class="button button-secondary" data-cta-location="final" href="tel:+593983881253">Llamar al 098 388 1253</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <a class="whatsapp-float" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20de%20una%20bomba%20de%20agua%20o%20sistema%20hidroneum%C3%A1tico%20en%20Quito." target="_blank" rel="noopener noreferrer" aria-label="Escribir a ISIYER por WhatsApp">
+    <span aria-hidden="true">WA</span><span class="sr-only">Escribir por WhatsApp</span>
+  </a>
 
-<section class="container">
+  <footer>
+    <p><strong>ISIYER S.A.S.</strong> · Ingeniería en Sistemas Industriales y Energía Renovable</p>
+    <p>Quito y valles · Ecuador · <a style="color:#fff" href="tel:+593983881253">098 388 1253</a></p>
+  </footer>
 
-<div class="section-heading">
-<h2>Servicios que ofrecemos</h2>
-<p>Atención técnica para fallas de presión, bombas dañadas, mantenimiento preventivo y revisión de sistemas hidroneumáticos.</p>
-</div>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Reparación y mantenimiento de bombas de agua y sistemas hidroneumáticos en Quito",
+    "description": "Diagnóstico, reparación y mantenimiento de bombas de agua y sistemas hidroneumáticos para edificios, conjuntos, casas y locales en Quito y sus valles.",
+    "url": "https://www.isiyer.com/bombas-de-agua.html",
+    "serviceType": [
+      "Reparación de bombas de agua",
+      "Mantenimiento de bombas de agua",
+      "Mantenimiento de sistemas hidroneumáticos",
+      "Diagnóstico de baja presión de agua"
+    ],
+    "areaServed": [
+      {"@type": "City", "name": "Quito"},
+      {"@type": "Place", "name": "Cumbayá"},
+      {"@type": "Place", "name": "Tumbaco"},
+      {"@type": "Place", "name": "Conocoto"},
+      {"@type": "Place", "name": "Sangolquí"},
+      {"@type": "AdministrativeArea", "name": "Rumiñahui"}
+    ],
+    "provider": {
+      "@type": "Organization",
+      "name": "ISIYER S.A.S.",
+      "url": "https://www.isiyer.com/",
+      "telephone": "+593983881253"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://www.isiyer.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Bombas de agua e hidroneumáticos",
+        "item": "https://www.isiyer.com/bombas-de-agua.html"
+      }
+    ]
+  }
+  </script>
+  <script>
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest ? event.target.closest('a[href]') : null;
+      if (!link || typeof window.gtag !== 'function') return;
 
-<div class="grid">
+      var href = link.getAttribute('href') || '';
+      var location = link.getAttribute('data-cta-location');
 
-<div class="card">
-<span class="service-number">01</span>
-<h3>Mantenimiento preventivo</h3>
-<p>
-Revisión integral de bombas para edificios, conjuntos residenciales, casas y comercios:
-presiones de trabajo, tablero de control, conexiones y estado general de componentes.
-</p>
-</div>
+      if (href.indexOf('tel:') === 0) {
+        window.gtag('event', 'phone_click', {
+          service_page: 'bombas_de_agua',
+          cta_location: location || 'other',
+          link_url: link.href
+        });
+      }
 
-<div class="card">
-<span class="service-number">02</span>
-<h3>Reparación de bombas de agua</h3>
-<p>
-Diagnóstico de bombas con fallas de arranque, baja presión de agua,
-funcionamiento irregular, ruido, vibración, fugas o falta de suministro.
-</p>
-</div>
-
-<div class="card">
-<span class="service-number">03</span>
-<h3>Sistemas hidroneumáticos</h3>
-<p>
-Reparación y mantenimiento de sistemas hidroneumáticos que no mantienen presión,
-presentan ciclos inestables o afectan el abastecimiento de agua.
-</p>
-</div>
-
-<div class="card">
-<span class="service-number">04</span>
-<h3>Optimización de presión de agua</h3>
-<p>
-Revisión técnica para corregir baja presión, edificio o casa sin agua,
-arranques frecuentes y fallas asociadas al sistema de bombeo.
-</p>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="container">
-
-<div class="section-heading">
-<h2>Trabajos realizados</h2>
-<p>Referencias visuales de sistemas de bombeo, salas de máquinas y equipos asociados.</p>
-</div>
-
-<div class="gallery">
-
-<figure class="work-card">
-<img src="fotos/sistema-hidroneumatico-bombas-rojas-quito-01.webp" alt="Sistema hidroneumatico con bombas de agua en Quito">
-<figcaption>Sistema hidroneumático con bombas y tanque.</figcaption>
-</figure>
-
-<figure class="work-card">
-<img src="fotos/sala-maquinas-sistema-bombeo-quito-02.webp" alt="Sala de maquinas con sistema de bombeo en Quito">
-<figcaption>Sala de máquinas con sistema de bombeo.</figcaption>
-</figure>
-
-<figure class="work-card">
-<img src="fotos/bombas-agua-sala-maquinas-quito-02.webp" alt="Bombas de agua instaladas en sala de maquinas en Quito">
-<figcaption>Bombas instaladas en sala de máquinas.</figcaption>
-</figure>
-
-<figure class="work-card">
-<img src="fotos/equipo-tecnico-mantenimiento-bombas-quito-01.webp" alt="Equipo tecnico realizando mantenimiento de bombas en Quito">
-<figcaption>Equipo técnico en mantenimiento de bombas.</figcaption>
-</figure>
-
-</div>
-
-</section>
-
-
-<section class="cta">
-
-<h2>¿Tiene baja presión, una bomba dañada o un hidroneumático fallando?</h2>
-
-<p>Solicite diagnóstico, reparación de bombas en Quito o mantenimiento preventivo de su sistema de agua.</p>
-
-<div class="cta-actions">
-
-<a href="https://wa.me/593983881253?text=Hola%2C%20necesito%20ayuda%20con%20reparaci%C3%B3n%20o%20mantenimiento%20de%20una%20bomba%20de%20agua%20o%20sistema%20hidroneum%C3%A1tico%20en%20Quito.%20%C2%BFMe%20pueden%20orientar%3F" target="_blank">
-Solicitar revisión por WhatsApp
-</a>
-
-<a class="call-link" href="tel:+593983881253">Llamar ahora: 098 388 1253</a>
-
-</div>
-
-</section>
-
-<a class="whatsapp-float" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20ayuda%20con%20reparaci%C3%B3n%20o%20mantenimiento%20de%20una%20bomba%20de%20agua%20o%20sistema%20hidroneum%C3%A1tico%20en%20Quito.%20%C2%BFMe%20pueden%20orientar%3F" target="_blank" aria-label="Escribir por WhatsApp">WA</a>
-
-
-<footer>
-
-<p>
-ISIYER S.A.S. | Ingeniería en Sistemas Industriales y Energía Renovable
-</p>
-
-<p>
-Quito - Ecuador
-</p>
-
-</footer>
-
-
+      if (location) {
+        window.gtag('event', 'cta_click', {
+          service_page: 'bombas_de_agua',
+          cta_location: location,
+          cta_channel: href.indexOf('tel:') === 0 ? 'phone' : 'whatsapp'
+        });
+      }
+    }, true);
+  </script>
 </body>
 </html>
