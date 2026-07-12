@@ -134,6 +134,8 @@ padding:20px;
 }
 
 </style>
+<link rel="stylesheet" href="navigation-isiyer.css">
+<script src="navigation-isiyer.js" defer></script>
 
 </head>
 
@@ -146,12 +148,22 @@ padding:20px;
 </header>
 
 
-<nav>
-<a href="index.html">Inicio</a>
-<a href="generadores-electricos.html">Generadores</a>
-<a href="bombas-de-agua.html">Bombas</a>
-<a href="aire-acondicionado.html">Aire acondicionado</a>
-<a href="tableros-electricos.html">Tableros eléctricos</a>
+<nav class="secondary-service-nav" aria-label="Navegación principal">
+<a href="index.html#inicio">Inicio</a>
+<details class="services-menu">
+<summary aria-label="Abrir menú de servicios" aria-expanded="false">Servicios</summary>
+<div class="services-submenu">
+<a href="bombas-de-agua.html">Bombas e hidroneumáticos</a>
+<a href="generadores-electricos.html">Generadores eléctricos</a>
+<a href="tableros-electricos.html" aria-current="page">Tableros eléctricos</a>
+<a href="aire-acondicionado.html">Climatización</a>
+<a href="calderas.html">Calderas</a>
+</div>
+</details>
+<a href="index.html#proyectos">Trabajos</a>
+<a href="index.html#nosotros">Nosotros</a>
+<a href="index.html#contacto">Contacto</a>
+<a class="nav-whatsapp" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20t%C3%A9cnica%20en%20Quito." target="_blank" rel="noopener noreferrer">WhatsApp</a>
 </nav>
 
 

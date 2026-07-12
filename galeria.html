@@ -115,6 +115,8 @@
       .topbar-inner, .footer-grid { flex-direction: column; align-items: flex-start; }
     }
   </style>
+  <link rel="stylesheet" href="navigation-isiyer.css" />
+  <script src="navigation-isiyer.js" defer></script>
 </head>
 <body>
 
@@ -134,13 +136,23 @@
           <span>Ingeniería en Sistemas Industriales y Energía Renovable</span>
         </div>
       </a>
-      <nav>
-        <ul>
+      <nav aria-label="Navegación principal">
+        <ul class="main-nav-list">
           <li><a href="index.html#inicio">Inicio</a></li>
-          <li><a href="index.html#servicios">Servicios</a></li>
-          <li><a href="index.html#proyectos">Proyectos</a></li>
-          <li><a href="galeria.html" style="color:var(--primary);font-weight:700;">Galería</a></li>
-          <li><a href="index.html#clientes">Clientes</a></li>
+          <li>
+            <details class="services-menu">
+              <summary aria-label="Abrir menú de servicios" aria-expanded="false">Servicios</summary>
+              <ul class="services-submenu">
+                <li><a href="bombas-de-agua.html">Bombas e hidroneumáticos</a></li>
+                <li><a href="generadores-electricos.html">Generadores eléctricos</a></li>
+                <li><a href="tableros-electricos.html">Tableros eléctricos</a></li>
+                <li><a href="aire-acondicionado.html">Climatización</a></li>
+                <li><a href="calderas.html">Calderas</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="galeria.html" aria-current="page" style="color:var(--primary);font-weight:700;">Trabajos</a></li>
+          <li><a href="index.html#nosotros">Nosotros</a></li>
           <li><a href="index.html#contacto">Contacto</a></li>
           <li><a class="btn btn-primary" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20ayuda%20con%20una%20reparaci%C3%B3n%20o%20mantenimiento%20en%20Quito%3A%20bomba%20de%20agua%2C%20generador%2C%20tablero%20el%C3%A9ctrico%2C%20aire%20acondicionado%20o%20caldera.%20%C2%BFMe%20pueden%20orientar%3F" target="_blank" rel="noopener noreferrer">Solicitar visita técnica sin costo</a></li>
         </ul>

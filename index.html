@@ -522,6 +522,19 @@
       color: var(--primary);
     }
 
+    .service-page-link {
+      display: inline-flex;
+      margin-top: 1rem;
+      margin-right: 0.85rem;
+      color: var(--primary);
+      font-size: 0.94rem;
+      font-weight: 800;
+    }
+
+    .service-page-link:hover {
+      color: var(--accent-dark);
+    }
+
     .problem-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -993,6 +1006,8 @@
       .topbar-inner, .footer-grid { flex-direction: column; align-items: flex-start; }
     }
   </style>
+  <link rel="stylesheet" href="navigation-isiyer.css" />
+  <script src="navigation-isiyer.js" defer></script>
 </head>
 <body>
   <div class="topbar">
@@ -1012,13 +1027,22 @@
         </div>
       </a>
 
-      <nav>
-        <ul>
+      <nav aria-label="Navegación principal">
+        <ul class="main-nav-list">
           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="galeria.html">Galería</a></li>
-          <li><a href="#clientes">Clientes</a></li>
+          <li>
+            <details class="services-menu">
+              <summary aria-label="Abrir menú de servicios" aria-expanded="false">Servicios</summary>
+              <ul class="services-submenu">
+                <li><a href="bombas-de-agua.html">Bombas e hidroneumáticos</a></li>
+                <li><a href="generadores-electricos.html">Generadores eléctricos</a></li>
+                <li><a href="tableros-electricos.html">Tableros eléctricos</a></li>
+                <li><a href="aire-acondicionado.html">Climatización</a></li>
+                <li><a href="calderas.html">Calderas</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="#proyectos">Trabajos</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#contacto">Contacto</a></li>
           <li><a class="btn btn-primary" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20ayuda%20con%20una%20reparaci%C3%B3n%20o%20mantenimiento%20en%20Quito%3A%20bomba%20de%20agua%2C%20generador%2C%20tablero%20el%C3%A9ctrico%2C%20aire%20acondicionado%20o%20caldera.%20%C2%BFMe%20pueden%20orientar%3F" target="_blank" rel="noopener noreferrer">Solicitar revisión por WhatsApp</a></li>
@@ -1109,6 +1133,7 @@
             <div class="card-icon">01</div>
             <h3>Sistemas hidroneumáticos y bombas de agua</h3>
             <p>Diagnóstico, mantenimiento y reparación de bombas, cisternas y sistemas de presión.</p>
+            <a class="service-page-link" href="bombas-de-agua.html">Ver servicio →</a>
             <a class="service-cta" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20t%C3%A9cnica%20para%20bombas%20de%20agua%20y%20sistemas%20hidroneum%C3%A1ticos%20en%20Quito." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a>
           </article>
 
@@ -1116,6 +1141,7 @@
             <div class="card-icon">02</div>
             <h3>Generadores eléctricos</h3>
             <p>Mantenimiento preventivo, revisión de alarmas, cambio de filtros, aceite y pruebas de funcionamiento.</p>
+            <a class="service-page-link" href="generadores-electricos.html">Ver servicio →</a>
             <a class="service-cta" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20t%C3%A9cnica%20para%20un%20generador%20el%C3%A9ctrico%20en%20Quito." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a>
           </article>
 
@@ -1123,6 +1149,7 @@
             <div class="card-icon">03</div>
             <h3>Tableros eléctricos</h3>
             <p>Revisión, mantenimiento y diagnóstico de tableros eléctricos y tableros de transferencia.</p>
+            <a class="service-page-link" href="tableros-electricos.html">Ver servicio →</a>
             <a class="service-cta" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20t%C3%A9cnica%20para%20un%20tablero%20el%C3%A9ctrico%20en%20Quito." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a>
           </article>
 
@@ -1130,6 +1157,7 @@
             <div class="card-icon">04</div>
             <h3>Climatización</h3>
             <p>Mantenimiento y diagnóstico de sistemas de aire acondicionado y climatización.</p>
+            <a class="service-page-link" href="aire-acondicionado.html">Ver servicio →</a>
             <a class="service-cta" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20t%C3%A9cnica%20para%20aire%20acondicionado%20o%20climatizaci%C3%B3n%20en%20Quito." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a>
           </article>
 
@@ -1137,6 +1165,7 @@
             <div class="card-icon">05</div>
             <h3>Calderas</h3>
             <p>Revisión técnica, mantenimiento y diagnóstico de fallas en calderas.</p>
+            <a class="service-page-link" href="calderas.html">Ver servicio →</a>
             <a class="service-cta" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20t%C3%A9cnica%20para%20una%20caldera%20en%20Quito." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a>
           </article>
         </div>
