@@ -307,7 +307,13 @@
       .steps li::before { margin-bottom: 15px; }
       .work-card img { height: 245px; }
       .zones { padding: 28px 22px; }
-      .whatsapp-float { display: none; }
+      .whatsapp-float {
+        display: grid;
+        width: 52px;
+        height: 52px;
+        right: 12px;
+        bottom: max(12px, env(safe-area-inset-bottom));
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
