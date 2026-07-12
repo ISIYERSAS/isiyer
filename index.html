@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reparación y mantenimiento de bombas, generadores y tableros en Quito | ISIYER</title>
-  <meta name="description" content="ISIYER S.A.S. atiende reparación, diagnóstico y mantenimiento electromecánico en Quito: bombas de agua, sistemas hidroneumáticos, generadores eléctricos, tableros, aire acondicionado y calderas." />
+  <title>Reparación de bombas, generadores y tableros en Quito | ISIYER Electromecánica</title>
+  <meta name="description" content="Mantenimiento y reparación de bombas de agua, sistemas hidroneumáticos, generadores eléctricos, tableros, climatización y calderas en Quito. Atención a edificios, conjuntos, casas y locales comerciales." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="ISIYER S.A.S." />
   <meta name="theme-color" content="#0f3b63" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="ISIYER S.A.S. | Reparación y mantenimiento electromecánico en Quito" />
-  <meta property="og:description" content="Diagnóstico, reparación y mantenimiento de bombas, sistemas hidroneumáticos, generadores eléctricos, tableros, aire acondicionado y calderas para edificios, conjuntos y empresas." />
+  <meta property="og:title" content="ISIYER Electromecánica | Reparación y mantenimiento en Quito" />
+  <meta property="og:description" content="Revisión técnica de bombas, sistemas hidroneumáticos, generadores, tableros, climatización y calderas para edificios, conjuntos, casas y locales en Quito." />
   <meta property="og:image" content="1.jpeg" />
   <meta property="og:locale" content="es_EC" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ISIYER S.A.S. | Reparación y mantenimiento electromecánico en Quito" />
+  <meta name="twitter:title" content="ISIYER Electromecánica | Reparación y mantenimiento en Quito" />
   <meta name="twitter:description" content="Revisión técnica de bombas, hidroneumáticos, generadores, tableros, climatización y calderas para clientes privados en Quito." />
   <meta name="twitter:image" content="1.jpeg" />
   <link rel="icon" type="image/png" href="ISIYERLOGO.png">
@@ -465,6 +465,10 @@
       gap: 1rem;
     }
 
+    .service-grid {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+
     .card {
       background: var(--white);
       border: 1px solid var(--border);
@@ -504,6 +508,84 @@
       margin: 0;
       color: var(--muted);
       font-size: 0.98rem;
+    }
+
+    .service-cta {
+      display: inline-flex;
+      margin-top: 1rem;
+      color: var(--accent-dark);
+      font-weight: 700;
+      font-size: 0.94rem;
+    }
+
+    .service-cta:hover {
+      color: var(--primary);
+    }
+
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.85rem 1.5rem;
+      max-width: 960px;
+      margin: 0 auto 2rem;
+      padding: 0;
+      list-style: none;
+    }
+
+    .problem-grid li {
+      position: relative;
+      padding: 1rem 1rem 1rem 2.8rem;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: 0 8px 22px rgba(15, 59, 99, 0.07);
+    }
+
+    .problem-grid li::before {
+      content: "✓";
+      position: absolute;
+      left: 1rem;
+      color: var(--accent-dark);
+      font-weight: 700;
+    }
+
+    .section-cta {
+      text-align: center;
+    }
+
+    .coverage-note {
+      max-width: 960px;
+      margin: 2rem auto 0;
+      padding: 1rem 1.2rem;
+      border-left: 4px solid var(--accent);
+      background: rgba(46, 164, 79, 0.07);
+      color: var(--primary-dark);
+    }
+
+    .faq-list {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      gap: 0.8rem;
+    }
+
+    .faq-list details {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      box-shadow: 0 8px 22px rgba(15, 59, 99, 0.07);
+    }
+
+    .faq-list summary {
+      color: var(--primary);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .faq-list p {
+      margin: 0.75rem 0 0;
+      color: var(--muted);
     }
 
     .service-links {
@@ -872,10 +954,12 @@
 
     @media (max-width: 1080px) {
       .grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
       .logo-grid { grid-template-columns: repeat(3, 1fr); }
       .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
       .gallery { grid-template-columns: repeat(2, 1fr); }
       .trust-stats { grid-template-columns: 1fr; }
+      .problem-grid { grid-template-columns: 1fr; }
       nav ul { gap: 0.8rem; }
     }
 
@@ -913,18 +997,18 @@
 <body>
   <div class="topbar">
     <div class="container topbar-inner">
-      <div>ATENCIÓN EN TODO EL ECUADOR</div>
-      <div>VENTAS@ISIYER.COM · 0983881253</div>
+      <div>ATENCIÓN EN QUITO Y VALLES · PROYECTOS FUERA DE QUITO SEGÚN ALCANCE TÉCNICO</div>
+      <div>VENTAS@ISIYER.COM · 098 388 1253</div>
     </div>
   </div>
 
   <header>
     <div class="container nav">
       <a href="#inicio" class="brand">
-        <img src="ISIYERLOGO.png" alt="Logo ISIYER" width="64" height="64" fetchpriority="high" decoding="async" />
+        <img src="ISIYERLOGO.png" alt="Logo de ISIYER Electromecánica en Quito" width="64" height="64" fetchpriority="high" decoding="async" />
         <div class="brand-text">
-          <strong>ISIYER S.A.S.</strong>
-          <span>Ingeniería en Sistemas Industriales y Energía Renovable</span>
+          <strong>ISIYER Electromecánica</strong>
+          <span>Reparación y mantenimiento en Quito</span>
         </div>
       </a>
 
@@ -947,10 +1031,10 @@
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Edificios · Conjuntos · Casas · Locales comerciales · Quito</div>
+          <div class="eyebrow">ISIYER Electromecánica · Quito y valles</div>
           <h1>
             Reparación y mantenimiento de bombas, generadores y sistemas electromecánicos en Quito
-            <span>ISIYER S.A.S. · Ingeniería en Sistemas Industriales y Energía Renovable</span>
+            <span>Ingeniería electromecánica con experiencia en mantenimiento técnico para sistemas críticos.</span>
           </h1>
           <p>
             Atendemos diagnóstico, reparación y mantenimiento de bombas de agua, sistemas hidroneumáticos,
@@ -970,16 +1054,16 @@
 
           <div class="trust-stats reveal">
             <div class="stat-box">
-              <strong>+100</strong>
-              <span>Intervenciones técnicas ejecutadas</span>
+              <strong>Experiencia técnica</strong>
+              <span>Mantenimiento y diagnóstico de sistemas electromecánicos</span>
             </div>
             <div class="stat-box">
               <strong>Clientes públicos y privados</strong>
               <span>Experiencia con instituciones y empresas reales</span>
             </div>
             <div class="stat-box">
-              <strong>Cobertura nacional</strong>
-              <span>Base técnica en Quito y atención según alcance del proyecto</span>
+              <strong>Quito y valles</strong>
+              <span>Proyectos fuera de Quito según alcance técnico</span>
             </div>
           </div>
         </div>
@@ -1013,36 +1097,47 @@
     <section class="section alt reveal" id="servicios">
       <div class="container">
         <div class="section-title">
-          <h2>Nuestros servicios</h2>
+          <h2>Servicios para edificios, conjuntos y locales comerciales</h2>
           <p>
-            Soluciones prácticas para reparación, mantenimiento y diagnóstico de sistemas electromecánicos en Quito,
-            con enfoque técnico y atención personalizada.
+            Atendemos fallas y mantenimientos en sistemas técnicos que afectan la operación diaria de edificios,
+            conjuntos residenciales, casas, oficinas y locales comerciales en Quito.
           </p>
         </div>
 
-        <div class="grid-4">
+        <div class="grid-4 service-grid">
           <article class="card">
             <div class="card-icon">01</div>
-            <h3>Bombas de agua e hidroneumáticos</h3>
-            <p>Reparación de bombas, mantenimiento de bombas de agua y diagnóstico de sistemas hidroneumáticos con baja presión o fallas de arranque.</p>
+            <h3>Sistemas hidroneumáticos y bombas de agua</h3>
+            <p>Diagnóstico, mantenimiento y reparación de bombas, cisternas y sistemas de presión.</p>
+            <a class="service-cta" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20t%C3%A9cnica%20para%20bombas%20de%20agua%20y%20sistemas%20hidroneum%C3%A1ticos%20en%20Quito." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a>
           </article>
 
           <article class="card">
             <div class="card-icon">02</div>
             <h3>Generadores eléctricos</h3>
-            <p>Mantenimiento de generadores eléctricos, diagnóstico de alarmas, revisión operativa y soporte para sistemas de respaldo.</p>
+            <p>Mantenimiento preventivo, revisión de alarmas, cambio de filtros, aceite y pruebas de funcionamiento.</p>
+            <a class="service-cta" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20t%C3%A9cnica%20para%20un%20generador%20el%C3%A9ctrico%20en%20Quito." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a>
           </article>
 
           <article class="card">
             <div class="card-icon">03</div>
             <h3>Tableros eléctricos</h3>
-            <p>Revisión, mantenimiento y reparación de tableros eléctricos, protecciones, contactores y sistemas de control.</p>
+            <p>Revisión, mantenimiento y diagnóstico de tableros eléctricos y tableros de transferencia.</p>
+            <a class="service-cta" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20t%C3%A9cnica%20para%20un%20tablero%20el%C3%A9ctrico%20en%20Quito." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a>
           </article>
 
           <article class="card">
             <div class="card-icon">04</div>
-            <h3>Climatización y calderas</h3>
-            <p>Mantenimiento de aire acondicionado, reparación de equipos de climatización y revisión técnica de calderas.</p>
+            <h3>Climatización</h3>
+            <p>Mantenimiento y diagnóstico de sistemas de aire acondicionado y climatización.</p>
+            <a class="service-cta" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20t%C3%A9cnica%20para%20aire%20acondicionado%20o%20climatizaci%C3%B3n%20en%20Quito." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">05</div>
+            <h3>Calderas</h3>
+            <p>Revisión técnica, mantenimiento y diagnóstico de fallas en calderas.</p>
+            <a class="service-cta" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20t%C3%A9cnica%20para%20una%20caldera%20en%20Quito." target="_blank" rel="noopener noreferrer">Consultar por WhatsApp →</a>
           </article>
         </div>
 
@@ -1056,10 +1151,38 @@
           <span class="chip">Sistemas contra incendio</span>
           <a class="chip" href="tableros-electricos.html">Tableros de transferencia</a>
         </div>
+
+        <p class="coverage-note">
+          <strong>Atención en Quito y valles.</strong> Quito Norte, Ponceano, Carcelén, El Condado, Calderón,
+          Cumbayá, Tumbaco, Puembo, Pifo, Conocoto, Sangolquí y Rumiñahui. Proyectos fuera de Quito según alcance técnico.
+        </p>
       </div>
     </section>
 
-    <section class="section reveal" id="proyectos">
+    <section class="section reveal" id="problemas">
+      <div class="container">
+        <div class="section-title">
+          <h2>¿Tienes alguno de estos problemas?</h2>
+          <p>Una revisión técnica permite identificar la falla y definir el mantenimiento o reparación que corresponde.</p>
+        </div>
+
+        <ul class="problem-grid">
+          <li>Baja presión de agua en el edificio o vivienda.</li>
+          <li>Bomba de agua que no arranca o trabaja de forma intermitente.</li>
+          <li>Sistema hidroneumático con fallas de presión.</li>
+          <li>Generador eléctrico con alarma o sin mantenimiento.</li>
+          <li>Tablero eléctrico con fallas, disparos o calentamiento.</li>
+          <li>Aire acondicionado sin mantenimiento o con bajo rendimiento.</li>
+          <li>Necesidad de mantenimiento preventivo para evitar paradas.</li>
+        </ul>
+
+        <div class="section-cta">
+          <a class="btn btn-primary" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20t%C3%A9cnica%20en%20Quito.%20%C2%BFMe%20pueden%20orientar%3F" target="_blank" rel="noopener noreferrer">Escríbenos por WhatsApp y agenda una revisión técnica</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt reveal" id="proyectos">
       <div class="container">
         <div class="section-title">
           <h2>Trabajos realizados</h2>
@@ -1138,12 +1261,13 @@
       </div>
     </section>
 
-    <section class="section alt reveal" id="clientes">
+    <section class="section reveal" id="clientes">
       <div class="container">
         <div class="section-title">
-          <h2>Empresas e instituciones que han confiado en nuestro trabajo</h2>
+          <h2>Respaldo técnico y experiencia comprobable</h2>
           <p>
-            La experiencia respaldada por clientes reales ayuda a evaluar el alcance técnico antes de solicitar una revisión o mantenimiento.
+            Además de atender clientes privados, ISIYER S.A.S. cuenta con experiencia en servicios electromecánicos para instituciones y empresas.
+            Este respaldo nos permite aplicar criterios técnicos claros en trabajos para edificios, conjuntos, comercios y pequeñas empresas.
           </p>
         </div>
 
@@ -1172,7 +1296,7 @@
       </div>
     </section>
 
-    <section class="section reveal" id="nosotros">
+    <section class="section alt reveal" id="nosotros">
       <div class="container">
         <div class="section-title">
           <h2>Nosotros</h2>
@@ -1189,7 +1313,7 @@
               orientada a brindar soluciones para edificios, conjuntos residenciales, casas, comercios, pequeñas empresas e instalaciones industriales.
             </p>
             <p>
-              Atendemos necesidades técnicas en Quito y proyectos en Ecuador, con enfoque en seguridad, calidad de ejecución y continuidad operativa.
+              Atendemos necesidades técnicas en Quito y valles. Los proyectos fuera de Quito se evalúan según su alcance técnico.
             </p>
           </div>
 
@@ -1202,6 +1326,38 @@
               <li>Soporte para edificios, conjuntos residenciales, casas, comercios e industrias.</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="preguntas-frecuentes">
+      <div class="container">
+        <div class="section-title">
+          <h2>Preguntas frecuentes</h2>
+          <p>Información práctica para solicitar mantenimiento o una revisión técnica con ISIYER.</p>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>¿ISIYER atiende sistemas hidroneumáticos en edificios?</summary>
+            <p>Sí. Realizamos diagnóstico, mantenimiento y reparación de bombas de agua y sistemas hidroneumáticos para edificios, conjuntos y viviendas en Quito.</p>
+          </details>
+          <details>
+            <summary>¿Realizan mantenimiento de generadores eléctricos en Quito?</summary>
+            <p>Sí. Atendemos mantenimiento preventivo y correctivo, revisión de alarmas y diagnóstico de fallas de arranque en generadores eléctricos.</p>
+          </details>
+          <details>
+            <summary>¿Atienden tableros eléctricos y tableros de transferencia?</summary>
+            <p>Sí. Revisamos tableros eléctricos, protecciones y tableros de transferencia para identificar fallas y necesidades de mantenimiento.</p>
+          </details>
+          <details>
+            <summary>¿Trabajan con conjuntos residenciales y administradores de edificios?</summary>
+            <p>Sí. Atendemos administradores, conjuntos residenciales, edificios, casas, oficinas, locales comerciales y pequeñas empresas.</p>
+          </details>
+          <details>
+            <summary>¿Cómo puedo solicitar una revisión técnica?</summary>
+            <p>Puede escribir al WhatsApp 098 388 1253, llamar al mismo número o completar el formulario de contacto para describir el equipo y la falla.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -1220,7 +1376,7 @@
             <h3>Información de contacto</h3>
             <div class="contact-item">
               <strong>Teléfono principal</strong>
-              <a href="tel:+593983881253">0983881253</a>
+              <a href="tel:+593983881253">098 388 1253</a>
             </div>
             <div class="contact-item">
               <strong>Teléfono adicional</strong>
@@ -1232,7 +1388,7 @@
             </div>
             <div class="contact-item">
               <strong>Cobertura</strong>
-              todo el Ecuador
+              Quito y valles. Proyectos fuera de Quito según alcance técnico.
             </div>
             <div class="contact-item">
               <strong>Facebook</strong>
@@ -1270,7 +1426,7 @@
           <a class="social-pill" href="https://www.instagram.com/isiyer_/" target="_blank" rel="noopener noreferrer"><img src="logo-instagram_1080029-106.avif" alt="Instagram" loading="lazy" decoding="async" />Instagram</a>
         </div>
       </div>
-      <div>Quito · Ecuador · 0983881253 · ventas@isiyer.com</div>
+      <div>Quito y valles · Ecuador · 098 388 1253 · ventas@isiyer.com</div>
     </div>
   </footer>
 
@@ -1362,14 +1518,26 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "ProfessionalService",
     "name": "ISIYER S.A.S.",
-    "image": "1.jpeg",
+    "alternateName": "ISIYER Electromecánica",
+    "image": "https://www.isiyer.com/1.jpeg",
     "description": "Reparación, diagnóstico y mantenimiento electromecánico en Quito para bombas de agua, sistemas hidroneumáticos, generadores eléctricos, tableros eléctricos, aire acondicionado y calderas.",
     "telephone": ["+593983881253", "+593963504911"],
     "email": "ventas@isiyer.com",
-    "areaServed": "Ecuador",
-    "url": "/",
+    "areaServed": "Quito y valles",
+    "url": "https://www.isiyer.com/",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios electromecánicos",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bombas de agua y sistemas hidroneumáticos" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento de generadores eléctricos" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento de tableros eléctricos" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Climatización y aire acondicionado" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mantenimiento de calderas" } }
+      ]
+    },
     "sameAs": [
       "https://www.facebook.com/ISIYER.Quito?locale=es_LA",
       "https://www.instagram.com/isiyer_/"
