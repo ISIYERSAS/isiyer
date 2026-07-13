@@ -22,6 +22,7 @@
 
 .services-menu summary::after {
   content: "▾";
+  color: inherit;
   font-size: .8em;
   transition: transform .18s ease;
 }
@@ -85,8 +86,9 @@
   margin: 0 8px;
 }
 
-.secondary-service-nav > .services-menu > summary {
-  color: #fff;
+.secondary-service-nav > .services-menu > summary,
+.service-nav-links > .services-menu > summary {
+  color: #17212b !important;
 }
 
 .secondary-service-nav .nav-whatsapp,
