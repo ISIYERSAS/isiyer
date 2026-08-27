@@ -162,3 +162,95 @@
     transition: none;
   }
 }
+
+/* ============================================================
+   MENÚ MÓVIL — botón hamburguesa (≤760px)
+   Problema que resuelve: el encabezado ocupaba 411-454px en un
+   celular de 844px de alto (49-54% de la pantalla) y en index y
+   galeria era "sticky", así que no se iba nunca al desplazar.
+   Los enlaces siguen intactos en el HTML: solo se ocultan por CSS.
+   Si el JavaScript no corre, el menú queda como estaba antes.
+   ============================================================ */
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .has-nav-toggle {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    align-items: center !important;
+    justify-content: space-between;
+    gap: .6rem;
+  }
+
+  .has-nav-toggle > .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .has-nav-toggle > .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .45rem;
+    flex: 0 0 auto;
+    min-width: 44px;
+    min-height: 44px;
+    padding: .5rem .75rem;
+    color: inherit;
+    font: inherit;
+    font-size: .9rem;
+    font-weight: 700;
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: .85;
+  }
+
+  .has-nav-toggle > .nav-toggle:hover,
+  .has-nav-toggle > .nav-toggle:focus-visible {
+    opacity: 1;
+  }
+
+  .nav-toggle-bars {
+    display: grid;
+    gap: 3px;
+    width: 18px;
+  }
+
+  .nav-toggle-bars::before,
+  .nav-toggle-bars::after,
+  .nav-toggle-bars span {
+    content: "";
+    display: block;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+  }
+
+  .has-nav-toggle > nav[aria-label="Navegación principal"] {
+    display: none;
+    order: 3;
+    width: 100%;
+  }
+
+  .has-nav-toggle.nav-abierto > nav[aria-label="Navegación principal"] {
+    display: block;
+    max-height: min(70vh, 520px);
+    padding-bottom: .5rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  /* El menú abierto se ve como lista vertical cómoda para el pulgar */
+  .has-nav-toggle.nav-abierto .main-nav-list,
+  .has-nav-toggle.nav-abierto .service-nav-links {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 2px !important;
+    width: 100%;
+  }
+}
