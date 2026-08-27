@@ -263,6 +263,28 @@
 
     footer { padding: 30px 20px; color: #d5e2ec; text-align: center; background: #051a2b; }
     footer p { margin: 4px 0; }
+
+    .hero-oferta {
+      margin: 12px 0 0;
+      padding: 10px 14px;
+      color: #eaf4ff;
+      background: rgba(255,255,255,.10);
+      border-left: 4px solid #55df87;
+      border-radius: 10px;
+      font-size: .95rem;
+      line-height: 1.4;
+    }
+    .trust-reviews { color: #fff; font-weight: 700; text-decoration: underline; }
+    .lead-humano { margin: 10px 0 0; color: var(--muted); }
+    /* Pastilla en vez de circulo: "WhatsApp" no cabe en 58px */
+    .whatsapp-float {
+      width: auto !important;
+      min-width: 58px;
+      height: 46px !important;
+      padding: 0 18px;
+      border-radius: 999px !important;
+    }
+    .whatsapp-float span[aria-hidden] { font-size: .9rem; font-weight: 800; white-space: nowrap; }
     .whatsapp-float {
       position: fixed;
       right: 18px;
@@ -366,9 +388,10 @@
           <h1>Reparación y mantenimiento de bombas de agua y sistemas hidroneumáticos en Quito</h1>
           <p class="hero-lead">Diagnóstico técnico para edificios, conjuntos residenciales, casas, locales comerciales y pequeñas empresas con baja presión, bombas que no arrancan o sistemas hidroneumáticos inestables.</p>
           <div class="actions">
-            <a class="button button-primary" data-cta-location="hero" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20de%20una%20bomba%20de%20agua%20o%20sistema%20hidroneum%C3%A1tico%20en%20Quito.%20Puedo%20enviar%20fotograf%C3%ADas%20y%20describir%20la%20falla." target="_blank" rel="noopener noreferrer">Solicitar revisión por WhatsApp</a>
+            <a class="button button-primary" data-cta-location="hero" href="https://wa.me/593983881253?text=Hola%2C%20solicito%20una%20visita%20t%C3%A9cnica%20gratis%20para%20una%20bomba%20de%20agua%20o%20sistema%20hidroneum%C3%A1tico.%20Sector%3A%20____.%20Tipo%20de%20inmueble%3A%20____.%20Falla%20observada%3A%20____.%20Adjunto%20fotos%20del%20equipo." target="_blank" rel="noopener noreferrer">Solicitar visita técnica gratis</a>
             <a class="button button-secondary" data-cta-location="hero" href="tel:+593983881253">Llamar al 098 388 1253</a>
           </div>
+          <p class="hero-oferta"><strong>Visita técnica GRATIS en Quito y valles.</strong> Informe de semaforización en <strong>24 horas</strong> para sustentar el gasto ante su directiva. Factura y <strong>6 meses de garantía</strong>.</p>
         </div>
         <figure class="hero-photo">
           <img src="fotos/sistema-hidroneumatico-edificio-quito.webp" width="1600" height="1200" alt="Sistema hidroneumático con bombas, tanques y tablero de control" decoding="async" fetchpriority="high">
@@ -382,6 +405,7 @@
         <li>Diagnóstico mecánico, eléctrico e hidráulico.</li>
         <li>Atención en Quito y valles.</li>
         <li>Sistemas para edificios, conjuntos, casas y comercios.</li>
+        <li><a class="trust-reviews" href="https://www.google.com/search?q=ISIYER+S.A.S.+bombas+de+agua+Quito" target="_blank" rel="noopener noreferrer">5,0 ★ en Google · opiniones verificadas</a></li>
       </ul>
     </div>
 
@@ -390,6 +414,7 @@
         <div class="section-heading">
           <span class="eyebrow">Señales que requieren revisión</span>
           <h2>¿Qué problema presenta el sistema?</h2>
+          <p class="lead-humano">Quedarse sin agua o sin presión de un momento a otro complica el día a todos. Estas son las señales más frecuentes con las que nos llaman:</p>
           <p>Una misma señal puede tener causas distintas. Estas referencias ayudan a describir la falla, pero la causa debe confirmarse mediante inspección y pruebas.</p>
         </div>
         <div class="card-grid">
@@ -513,7 +538,22 @@
           <h3>Especial atención a edificios y conjuntos</h3>
           <p>Esta página está orientada especialmente a administradores y propietarios que necesitan revisar bombas, tanques, tableros, sensores, cisterna y redes asociadas al abastecimiento de varias unidades.</p>
           <p>Para orientar la visita conviene informar cuántas bombas existen, qué señal presenta el sistema y si el problema afecta a todo el inmueble o a zonas específicas.</p>
+          <p><a class="button button-primary" data-cta-location="administradores" href="https://wa.me/593983881253?text=Hola%2C%20administro%20un%20conjunto%20o%20edificio.%20Nombre%3A%20____.%20Sector%3A%20____.%20N%C3%BAmero%20de%20bombas%3A%20____.%20Bloques%20o%20unidades%20afectadas%3A%20____.%20Existe%2Fno%20existe%20bomba%20de%20respaldo.%20Adjunto%20fotos%20del%20cuarto%20de%20bombas." target="_blank" rel="noopener noreferrer">Soy administrador y necesito una revisión</a></p>
         </aside>
+      </div>
+    </section>
+
+    <section class="section" id="respaldo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Respaldo del trabajo</span>
+          <h2>El respaldo que su conjunto o empresa necesita</h2>
+        </div>
+        <ul class="audience-list">
+          <li><strong>Diagnóstico claro.</strong> La proforma incluye un informe de semaforización (verde, amarillo, rojo) que se entrega dentro de las 24 horas siguientes a la visita, para respaldar y justificar el mantenimiento ante la directiva o la asamblea.</li>
+          <li><strong>Capacidad de respuesta.</strong> Contamos con un equipo de técnicos especializados, con capacidad para atender varios frentes a la vez. No dependemos de una sola persona.</li>
+          <li><strong>Garantía formal.</strong> Todo trabajo aprobado se entrega con factura y garantía técnica por escrito de 6 meses.</li>
+        </ul>
       </div>
     </section>
 
@@ -574,7 +614,7 @@
   </main>
 
   <a class="whatsapp-float" href="https://wa.me/593983881253?text=Hola%2C%20necesito%20una%20revisi%C3%B3n%20de%20una%20bomba%20de%20agua%20o%20sistema%20hidroneum%C3%A1tico%20en%20Quito." target="_blank" rel="noopener noreferrer" aria-label="Escribir a ISIYER por WhatsApp">
-    <span aria-hidden="true">WA</span><span class="sr-only">Escribir por WhatsApp</span>
+    <span aria-hidden="true">WhatsApp</span><span class="sr-only">Escribir por WhatsApp</span>
   </a>
 
   <footer>
