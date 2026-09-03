@@ -115,6 +115,11 @@
       .photo-grid { grid-template-columns: 1fr; }
       .topbar-inner, .footer-grid { flex-direction: column; align-items: flex-start; }
     }
+
+    /* --- Bloque de formalidad (mesa 2026-09-02). Solo se anade; nada existente se altera. --- */
+    .respaldo-list{display:grid;gap:12px;padding:0;margin:0;list-style:none}
+    .respaldo-list li{background:#fff;border:1px solid var(--line);border-left:4px solid var(--cyan);border-radius:12px;padding:18px 20px;color:var(--muted)}
+    .respaldo-list strong{color:var(--blue)}
   </style>
   <link rel="stylesheet" href="navigation-isiyer.css" />
   <script src="navigation-isiyer.js" defer></script>
@@ -647,6 +652,7 @@
       </div>
 
     </div>
+    <section class="section-alt"><div class="container"><div class="section-head"><h2>Retiro y entrega de bombas</h2><p>Si una bomba necesita taller, no hace falta que nadie la mueva.</p></div><ul class="respaldo-list"><li><strong>Retiro coordinado.</strong> Retiramos el equipo del edificio, conjunto o local en Quito y los valles.</li><li><strong>Diagnóstico antes de reparar.</strong> Se revisa el equipo y se informa el alcance antes de intervenirlo.</li><li><strong>Devolución instalada.</strong> La bomba vuelve montada y probada en funcionamiento.</li><li><strong>Respaldo formal.</strong> Factura y garantía técnica por escrito de 6 meses.</li></ul><p class="lead-humano">La visita técnica para revisar el equipo es gratuita en Quito y los valles.</p></div></section>
   </main>
 
   <footer>
