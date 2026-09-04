@@ -1010,6 +1010,122 @@
     .respaldo-list{display:grid;gap:12px;padding:0;margin:0;list-style:none}
     .respaldo-list li{background:var(--white);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:12px;padding:18px 20px;color:var(--muted)}
     .respaldo-list strong{color:var(--primary)}
+
+    /* ============================================================
+       DISEÑO PORTADA — capa de estilo (03/09/2026). Solo CSS: no cambia
+       textos, encabezados, enlaces ni datos estructurados.
+       ============================================================ */
+    body { font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+
+    /* 1. Sin efecto "fantasma": el contenido se ve desde el primer pintado */
+    .reveal { opacity: 1; transform: none; transition: none; }
+
+    /* 2. Hero: foto real de sala de bombas (ya se descarga para el carrusel: 0 KB extra) */
+    .hero {
+      background:
+        linear-gradient(120deg, rgba(6,24,39,0.94) 0%, rgba(10,41,68,0.88) 55%, rgba(15,59,99,0.72) 100%),
+        url('fotos/sistema-hidroneumatico-bombas-rojas-quito-01.webp') center 40%/cover no-repeat;
+      background-color: #0a2944;
+      padding: 4.6rem 0 4.2rem;
+    }
+    .hero h1, .hero h1 span, .hero p { text-shadow: 0 2px 10px rgba(3,12,22,0.45); }
+    .hero::before { background: linear-gradient(180deg, rgba(5,15,26,0.10), rgba(5,15,26,0.35)); }
+    .hero h1 { font-size: clamp(2rem, 4.1vw, 3.3rem); letter-spacing: -0.01em; }
+    .hero h1 span { font-size: clamp(1rem, 1.8vw, 1.15rem); color: #c9dcee; }
+    .hero p { font-size: 1rem; color: #dbe7f3; }
+    .eyebrow { background: rgba(46,164,79,0.18); border-color: rgba(46,164,79,0.45); color: #d8f5e1; font-size: 0.82rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .hero-points { gap: 0.5rem; }
+    .hero-points span { font-size: 0.85rem; padding: 0.35rem 0.7rem; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.14); }
+    .hero-points span::before { content: "•"; color: var(--accent); margin-right: 0.4rem; font-weight: 700; }
+    .trust-stats { margin-top: 1.6rem; gap: 0.75rem; }
+    .stat-box { padding: 0.85rem 1rem; border-radius: 12px; background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.16); backdrop-filter: none; }
+    .stat-box strong { font-size: 1rem; margin-bottom: 0.15rem; }
+    .stat-box span { font-size: 0.85rem; color: #c9dcee; }
+    .hero-card { background: rgba(8,30,50,0.55); border-color: rgba(255,255,255,0.16); padding: 1.25rem; }
+    .hero-card h3 { font-size: 1rem; color: #ffffff; }
+    .hero-card ul { color: #dbe7f3; font-size: 0.95rem; }
+    .hero-card li + li { margin-top: 0.35rem; }
+
+    /* 3. Títulos de sección: más contenidos, con una línea de acento */
+    .section { padding: 4.2rem 0; }
+    .section-title h2 { font-size: clamp(1.65rem, 3.2vw, 2.25rem); line-height: 1.2; letter-spacing: -0.01em; }
+    .section-title h2::after { content: ""; display: block; width: 56px; height: 4px; margin: 0.85rem auto 0; border-radius: 4px; background: var(--accent); }
+    .section-title p { font-size: 1rem; }
+
+    /* 4. Servicios: 3 columnas (2 filas de 3), sin tarjeta huérfana; enlaces como botones */
+    .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+    .card { display: flex; flex-direction: column; padding: 1.5rem; border-radius: 16px; box-shadow: 0 6px 20px rgba(15,59,99,0.07); }
+    .card p { flex: 1 1 auto; }
+    .card-icon { width: 44px; height: 44px; font-size: 0.95rem; border-radius: 12px; background: rgba(15,59,99,0.08); color: var(--primary); }
+    .card h3 { font-size: 1.12rem; }
+    .service-page-link, .service-cta {
+      margin-top: 0; padding: 0.62rem 0.95rem; border-radius: 999px; font-size: 0.9rem; font-weight: 700;
+      align-items: center; justify-content: center; white-space: nowrap;
+    }
+    .service-page-link { margin: 1.1rem 0.5rem 0 0; color: var(--primary); border: 1px solid var(--border); background: var(--white); }
+    .service-page-link, .service-cta { transition: transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease; }
+    .service-page-link:hover, .service-page-link:focus-visible { border-color: var(--primary); color: var(--primary); transform: translateY(-1px); box-shadow: 0 6px 16px rgba(15,59,99,0.12); }
+    .service-cta { margin-top: 1.1rem; color: var(--white); background: var(--accent); }
+    .service-cta:hover, .service-cta:focus-visible { background: var(--accent-dark); color: var(--white); transform: translateY(-1px); box-shadow: 0 8px 18px rgba(46,164,79,0.28); }
+    .btn:focus-visible, .filter-btn:focus-visible, .chip:focus-visible { outline: 3px solid rgba(46,164,79,0.5); outline-offset: 2px; }
+
+    /* 5. Chips de enlaces internos: más discretos */
+    .chip { padding: 0.5rem 0.8rem; font-size: 0.85rem; font-weight: 600; box-shadow: none; border-radius: 999px; background: rgba(255,255,255,0.9); }
+    .coverage-note { border-radius: 12px; font-size: 0.95rem; }
+
+    /* 6. Problemas: sin tarjeta huérfana */
+    .problem-grid li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+    /* 7. Logos: legibles */
+    .logo-box { min-height: 108px; border-radius: 14px; box-shadow: 0 6px 18px rgba(15,59,99,0.06); }
+    .logo-box img { max-height: 60px; max-width: 150px; filter: grayscale(100%); opacity: 0.9; }
+
+    /* 8. Dos secciones grises seguidas: la primera pasa a blanco */
+    .section.alt:has(+ .section.alt) { background: var(--white); }
+
+    /* 9. Preguntas frecuentes: marcador "+" y apertura clara */
+    .faq-list summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after { content: "+"; font-size: 1.4rem; line-height: 1; color: var(--accent-dark); flex: 0 0 auto; }
+    .faq-list details[open] summary::after { content: "–"; }
+
+    /* 10. Contacto y pie */
+    .contact-card .btn { margin-top: 0.5rem; }
+    .form input:focus, .form textarea:focus { outline: 2px solid rgba(46,164,79,0.45); border-color: var(--accent); }
+    footer { padding: 2.4rem 0; border-top: 4px solid var(--accent); }
+
+    @media (max-width: 1080px) {
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* 11. Móvil: primer pantallazo más corto, todo sigue visible */
+    @media (max-width: 760px) {
+      .topbar { font-size: 0.74rem; letter-spacing: 0.01em; }
+      .topbar-inner { gap: 0.15rem; padding: 0.4rem 0; }
+      .hero { padding: 2.4rem 0 2.8rem; }
+      .hero h1 { font-size: clamp(1.7rem, 7.6vw, 2.2rem); line-height: 1.12; }
+      .hero h1 span { font-size: 0.95rem; margin-top: 0.6rem; }
+      .hero p { font-size: 0.95rem; margin-bottom: 1.2rem; }
+      .hero-actions { gap: 0.6rem; margin-bottom: 1rem; }
+      .hero-actions .btn { min-height: 48px; }
+      .hero-points { gap: 0.4rem; }
+      .hero-points span { width: auto; font-size: 0.8rem; padding: 0.3rem 0.6rem; }
+      .trust-stats { grid-template-columns: 1fr; gap: 0.45rem; margin-top: 1.1rem; }
+      .stat-box { display: flex; align-items: baseline; gap: 0.5rem; padding: 0.55rem 0.8rem; }
+      .stat-box strong { font-size: 0.9rem; line-height: 1.3; margin: 0; flex: 0 0 auto; }
+      .stat-box span { font-size: 0.85rem; line-height: 1.3; }
+      .section { padding: 3rem 0; }
+      .service-grid { grid-template-columns: 1fr; gap: 0.9rem; }
+      .card { padding: 1.25rem; }
+      .service-page-link, .service-cta { flex: 1 1 auto; margin: 0.9rem 0 0; }
+      .card > .service-page-link { margin-right: 0.5rem; }
+      .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 0.7rem; }
+      .logo-box { min-height: 84px; }
+      .logo-box img { max-height: 44px; }
+      .gallery-toolbar { gap: 0.5rem; }
+      .filter-btn { padding: 0.6rem 0.8rem; font-size: 0.88rem; box-shadow: none; }
+      .footer-grid { text-align: left; }
+    }
   </style>
   <link rel="stylesheet" href="navigation-isiyer.css" />
   <script src="navigation-isiyer.js" defer></script>
