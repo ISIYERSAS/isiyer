@@ -254,3 +254,81 @@
     width: 100%;
   }
 }
+
+/* ============================================================
+   MENÚ MÓVIL SIN SALTO DE DISEÑO (03/09/2026)
+   Problema medido: el JS (defer) colapsaba un nav de 400-450 px
+   DESPUÉS del primer pintado; todo el contenido saltaba (CLS 0,2-0,31).
+   Solución en CSS puro: antes de que corra el JS, el nav ya es una
+   TIRA de 44 px (enlaces en fila, con desplazamiento horizontal).
+   Cuando el JS inserta el botón "Menú", ocupa esa misma fila de 44 px.
+   Misma altura antes y después: nada se mueve. Si el JS no corre,
+   los enlaces siguen visibles y usables en la tira.
+   ============================================================ */
+@media (max-width: 760px) {
+  header nav[aria-label="Navegación principal"] {
+    order: 3;
+    width: 100%;
+    min-height: 44px;
+  }
+
+  header nav[aria-label="Navegación principal"] > .main-nav-list,
+  header nav[aria-label="Navegación principal"].secondary-service-nav {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: nowrap;
+    align-items: center !important;
+    justify-content: flex-start;
+    gap: 14px;
+    width: 100%;
+    min-height: 44px;
+    margin: 0;
+    padding: 0 !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    text-align: left;
+  }
+
+  header nav[aria-label="Navegación principal"] .main-nav-list > li,
+  header nav[aria-label="Navegación principal"] .services-menu,
+  header nav[aria-label="Navegación principal"].secondary-service-nav > a {
+    width: auto;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  /* La fila de cabecera: logo en la primera línea, tira debajo */
+  header:has(> nav[aria-label="Navegación principal"]),
+  header *:has(> nav[aria-label="Navegación principal"]) {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    align-items: center !important;
+    justify-content: space-between;
+    gap: .6rem;
+  }
+
+  /* Con JS: el botón "Menú" ocupa la fila de 44 px que deja la tira */
+  .has-nav-toggle > .nav-toggle {
+    flex: 1 1 100% !important;
+    width: 100%;
+    order: 2;
+  }
+
+  /* Menú abierto (JS): vuelve a lista vertical, como hasta hoy */
+  .has-nav-toggle.nav-abierto > nav[aria-label="Navegación principal"] > .main-nav-list,
+  .has-nav-toggle.nav-abierto > nav[aria-label="Navegación principal"].secondary-service-nav {
+    flex-direction: column !important;
+    flex-wrap: wrap;
+    align-items: stretch !important;
+    overflow: visible;
+    padding: 12px 18px !important;
+  }
+
+  .has-nav-toggle.nav-abierto .main-nav-list > li,
+  .has-nav-toggle.nav-abierto .services-menu,
+  .has-nav-toggle.nav-abierto > nav.secondary-service-nav > a {
+    width: 100%;
+    white-space: normal;
+  }
+}
