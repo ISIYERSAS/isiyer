@@ -56,10 +56,16 @@
     .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 14px 28px rgba(46,164,79,0.24); }
     .btn-primary:hover { background: var(--accent-dark); }
 
+    /* Movil: solo degradado (la foto de fondo era el elemento LCP). Escritorio: foto ligera. */
     .page-hero {
-      background: linear-gradient(135deg, rgba(15,59,99,0.96), rgba(15,59,99,0.78)),
-                  url('fotos/inec-generadores-tecnico-modasa-01.webp') center/cover no-repeat;
+      background: linear-gradient(135deg, rgba(15,59,99,0.96), rgba(15,59,99,0.78));
       color: var(--white); padding: 3.5rem 0 3rem;
+    }
+    @media (min-width: 761px) {
+      .page-hero {
+        background: linear-gradient(135deg, rgba(15,59,99,0.96), rgba(15,59,99,0.78)),
+                    url('fotos/hero/inec-generadores-tecnico-modasa-01.webp') center/cover no-repeat;
+      }
     }
     .page-hero h1 { margin: 0 0 0.6rem; font-size: clamp(1.9rem, 4vw, 3rem); }
     .page-hero p { margin: 0; color: #d7e6f6; font-size: 1.05rem; max-width: 640px; }
