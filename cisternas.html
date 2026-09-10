@@ -45,6 +45,11 @@
     .respaldo-list{display:grid;gap:12px;padding:0;margin:0;list-style:none}
     .respaldo-list li{background:#fff;border:1px solid var(--line);border-left:4px solid var(--cyan);border-radius:12px;padding:18px 20px;color:var(--muted)}
     .respaldo-list strong{color:var(--blue)}
+
+    /* Pastilla en vez de circulo: "WhatsApp" no cabe en 58px */
+    .whatsapp-float{width:auto;min-width:58px;height:46px;padding:0 18px;border-radius:999px;font-size:.9rem;font-weight:800;white-space:nowrap}
+    .whatsapp-float:hover,.whatsapp-float:focus-visible{background:#1fb856}
+    @media(max-width:680px){.whatsapp-float{width:auto;height:42px;padding:0 14px;right:12px}}
   </style>
 </head>
 <body>
